@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=w
+comment0.target=void\ mouseSobreSimbolo(greenfoot.World)
+comment0.text=\r\n\ Act\ -\ hace\ lo\ que\ Symbol\ quiere\ hacer.\ Este\ m\u00E9todo\ se\ llama\ "cuando\ quiera"\ o\ whenever\r\n\ los\ botones\ 'Actuar\ or\ 'Ejecutar'\ son\ presionados\ en\ el\ entorno.\r\n
+comment1.params=w\ m
+comment1.target=void\ empezarJuego(greenfoot.World,\ greenfoot.GreenfootSound)
+numComments=2
