@@ -1,5 +1,0 @@
-#BlueJ class context
-comment0.params=escenario\ jug\ ene
-comment0.target=Juego(int,\ Jugador,\ Enemigo)
-comment0.text=\r\n\ METODO\ CONSTRUCTOR\r\n\ este\ es\ el\ costructor\ inicial\ del\ juego\ y\ este\ propone\ las\ instancias\ iniciales\ del\ mundo\r\n\ @param\ escenario\ el\ ecsenario\ donde\ se\ desarrolla\ va\ el\ 1\ al\ 5\r\n\ @param\ jug\ es\ la\ informacion\ general\ del\ jugador\ (UNA\ CLASE\ JUGADOR)\r\n\ @param\ ene\ es\ la\ informacion\ general\ del\ enemigo\ (UNA\ CLASE\ ENEMIGO)\r\n
-numComments=1

@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=num
-comment0.target=boolean\ noHayObjectos(int)
-comment1.params=b
-comment1.target=Vida\ creaVida(boolean)
-comment2.params=dano\ b\ vid
-comment2.target=int\ afectado(int,\ boolean,\ Vida)
-numComments=3
