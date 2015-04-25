@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Jugador()
+comment0.text=\r\n\ Constructor\ para\ objetos\ de\ clase\ Jugador.\r\n
+comment1.params=unScore
+comment1.target=void\ setScore(int)
+comment2.params=unBando
+comment2.target=void\ setBando(boolean)
+comment3.params=unNombre
+comment3.target=void\ setName(java.lang.String)
+comment4.params=
+comment4.target=int\ getScore()
+comment5.params=
+comment5.target=boolean\ getBando()
+comment6.params=
+comment6.target=java.lang.String\ getNombre()
+numComments=7
