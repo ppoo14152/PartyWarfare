@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=unNum
+comment0.target=GuerreroDark3(int)
+comment1.params=
+comment1.target=void\ act()
+comment2.params=dir
+comment2.target=boolean\ objectoEnFrente(int)
+comment3.params=
+comment3.target=int\ retribulleDinero()
+comment4.params=
+comment4.target=int\ retribulleScore()
+numComments=5
