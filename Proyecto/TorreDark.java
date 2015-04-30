@@ -30,6 +30,7 @@ public class TorreDark extends Torre
     private int score;
     private Jugador jugador;
     private GreenfootSound musica;
+    private Records records;
     public TorreDark(boolean band,int dif,Jugador jug, GreenfootSound m)
     {
         if(band==true)
@@ -44,6 +45,7 @@ public class TorreDark extends Torre
         score=0;
         bd=band;
         activaRango=1;
+        records=new Records();
         d=dif;
         musica=m;
     }
@@ -95,6 +97,7 @@ public class TorreDark extends Torre
                     score=((TorreLux)torre.get(0)).getScore();
                 }
                 jugador.setScore(score);
+                records.guardaRecords(score);
                 w=new FinalEscenario(bd,jugador,musica);
                 Greenfoot.setWorld(w);
             }

@@ -21,6 +21,6 @@ public class AyudaFondo extends World
         super(800, 600, 1); 
         Boton r;
         r=new Return(music);
-        addObject(r,700,500);
+        addObject(r,58,542);
     }
 }
