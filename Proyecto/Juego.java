@@ -117,6 +117,8 @@ public class Juego extends World
         timer=new SimpleTimer();
         Indicador indice=new Indicador();
         addObject(indice,601,563);
+        Power pow=new Power();
+        addObject(pow,405,513);
     }
 
     public void act()
