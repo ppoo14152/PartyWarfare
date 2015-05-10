@@ -3,8 +3,9 @@ import greenfoot.*;
 /**
  * Escribe una descrición de la clase BotonW1 aquí.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @author Irvin Alexis Rodriguez Estrada
+ * @author Irving Gerardo Cardenaz Hernandez
+ * @versión (Mayo 2015)
  */
 public class BotonW1 extends Actor
 {

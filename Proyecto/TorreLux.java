@@ -5,8 +5,9 @@ import java.awt.Color;
 /**
  * Escribe una descrición de la clase Jugador aquí.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @author Irvin Alexis Rodriguez Estrada
+ * @author Irving Gerardo Cardenaz Hernandez
+ * @versión (Mayo 2015)
  */
 public class TorreLux extends Torre
 {

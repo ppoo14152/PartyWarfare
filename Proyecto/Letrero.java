@@ -4,8 +4,9 @@ import java.awt.*;
 /**
  * Escribe una descrición de la clase Letrero aquí.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @author Irvin Alexis Rodriguez Estrada
+ * @author Irving Gerardo Cardenaz Hernandez
+ * @versión (Mayo 2015)
  */
 public class Letrero extends Actor
 {

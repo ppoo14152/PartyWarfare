@@ -3,8 +3,9 @@ import greenfoot.*;
 /**
  * Write a description of class icoj here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Irvin Alexis Rodriguez Estrada
+ * @author Irving Gerardo Cardenaz Hernandez
+ * @versión (Mayo 2015)
  */
 public class icoj extends Boton
 {

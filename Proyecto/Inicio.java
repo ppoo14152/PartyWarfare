@@ -25,7 +25,7 @@ public class Inicio extends World
         
         GreenfootSound music=new GreenfootSound("Piñaton.mp3");
         music.playLoop();
-        music.setVolume(1);
+        music.setVolume(90);
         
         Boton b1;//Boton Juego
         Boton b2;//Boton Puntaje
