@@ -17,7 +17,7 @@ public class GuerreroLux2 extends GuerBueno
     private GreenfootImage i3=new GreenfootImage("na1.png");
     private GreenfootImage i4=new GreenfootImage("na2.png");
     private GreenfootImage i5=new GreenfootImage("na3.png");
-    private int vida=300;
+    private int vida=75;
     private int band=0;
     private int band2=0;
     private int band3=0;
@@ -62,7 +62,7 @@ public class GuerreroLux2 extends GuerBueno
                 setImage(i5);
                 band2=0;
             } 
-            int activa=Greenfoot.getRandomNumber(80);
+            int activa=Greenfoot.getRandomNumber(50);
             if(activa==5)
             {
                 dineroguerra=dineroguerra+200;

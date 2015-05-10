@@ -15,7 +15,7 @@ public class GuerreroLux1 extends GuerBueno
     private GreenfootImage i1=new GreenfootImage("b1.png");
     private GreenfootImage i2=new GreenfootImage("b2.png");
     private GreenfootImage i3=new GreenfootImage("b3.png");
-    private int vida=100;
+    private int vida=50;
     private int band=0;
     private int band2=0;
     private int band3=0;

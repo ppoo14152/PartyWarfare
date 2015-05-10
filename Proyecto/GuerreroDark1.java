@@ -17,7 +17,7 @@ public class GuerreroDark1 extends GuerMalo
     private GreenfootImage img3=new GreenfootImage("pin3.png");
     private GreenfootImage img4=new GreenfootImage("pin4.png");
 
-    private int vida=100;
+    private int vida=50;
     private int band=0;
     private int band2=0;
     private int band3=0;
@@ -56,7 +56,7 @@ public class GuerreroDark1 extends GuerMalo
                 setImage(img4);
                 band2=0;
             } 
-            int activa=Greenfoot.getRandomNumber(80);
+            int activa=Greenfoot.getRandomNumber(20);
             if(activa==5)
             {
                 dineroguerra=dineroguerra+200;
