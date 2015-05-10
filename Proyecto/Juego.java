@@ -115,6 +115,8 @@ public class Juego extends World
         Letrero score=new Letrero("SCORE",Color.BLACK);
         addObject(score,666,469);
         timer=new SimpleTimer();
+        Indicador indice=new Indicador();
+        addObject(indice,601,563);
     }
 
     public void act()
