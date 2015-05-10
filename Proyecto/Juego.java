@@ -30,6 +30,7 @@ public class Juego extends World
     final int JAPAN=5;
     private int dificultad;
     private GreenfootSound musica;
+    private SimpleTimer timer;
     /**
      * METODO CONSTRUCTOR
      * este es el costructor inicial del juego y este propone las instancias iniciales del mundo
@@ -113,5 +114,17 @@ public class Juego extends World
         addObject(dineroText,520,471);
         Letrero score=new Letrero("SCORE",Color.BLACK);
         addObject(score,666,469);
+        timer=new SimpleTimer();
+    }
+
+    public void act()
+    {
+        Coins moneda=new Coins();
+
+        if(timer.millisElapsed()>10300)
+        {
+            addObject(moneda,Greenfoot.getRandomNumber(800),146);
+            timer.mark();
+        }
     }
 }
