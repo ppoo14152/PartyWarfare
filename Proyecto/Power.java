@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.*;
 
 /**
  * Escribe una descrición de la clase Power aquí.
@@ -24,7 +25,14 @@ public class Power extends Actor
     
     public void act() 
     {
-        // Agrega tus códigos de acción aquí.
+        
+        if(Greenfoot.mouseClicked(this)&&interruptor==1)
+        {
+            World w=getWorld();
+            desactivaPower();
+            List l1=w.getObjectsAt(601,563,Indicador.class);
+            ((Indicador)l1.get(0)).clear();
+        }
     }    
     
     public void activaPower()

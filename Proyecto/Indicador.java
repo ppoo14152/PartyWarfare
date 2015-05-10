@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.*;
 
 /**
  * Escribe una descrición de la clase Indicador aquí.
@@ -28,6 +29,16 @@ public class Indicador extends Actor
         cuatro=new GreenfootImage("coinsfull.2.png");
         full=new GreenfootImage("coinsfull.png");
         cantidad=0;
+    }
+    
+    public void act()
+    {
+        if(cantidad>=5)
+        {
+            World w=getWorld();
+            List l1=w.getObjectsAt(405,513,Power.class);
+            ((Power)l1.get(0)).activaPower();
+        }
     }
     
     public void aumenta()
