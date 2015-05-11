@@ -2,7 +2,7 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * Escribe una descrición de la clase GuerBueno aquí.
+ * Subclase correspondiente a los guerreros del equipo de la luz.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

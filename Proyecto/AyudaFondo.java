@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Muestra las Ayudas del juego
+ * Muestra las Ayudas del juego; aqui graficamente podemos observar cómo jugar
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

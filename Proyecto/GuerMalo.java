@@ -2,7 +2,7 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * Escribe una descrición de la clase GuerMalo aquí.
+ * Subclase correspondiente a los guerreros del equipo de la oscuridad.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

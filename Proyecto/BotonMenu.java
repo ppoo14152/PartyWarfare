@@ -1,7 +1,8 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase BotonMenu aquí.
+ * Este botón aparece al final del juego, en la pantalla que muestra el puntaje obtenido,
+ * al presionarse nos regresará a la pantalla de selección de escenario.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

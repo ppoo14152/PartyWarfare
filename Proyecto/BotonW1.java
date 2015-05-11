@@ -1,8 +1,9 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase BotonW1 aquí.
- * 
+ *Este boton (durante el modo de juego) al presionarse nos genera una piñata guerrera
+ * en este caso, la más debil de las tres.
+
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
  * @versión (Mayo 2015)

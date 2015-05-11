@@ -1,7 +1,9 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Guerrero aquí.
+ * Esta clase representa a las piñatas guerreras del juego, en la cual se incluye a las
+ * subclases de "guermalo" que representa al equipo de la oscuridad,y la subclase "guerbueno",
+ * la cual hace referencia al equipo de la luz.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

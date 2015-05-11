@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Icop here.
+ * Al presionar este boton, nos mostrará la pantalla de puntuaciones
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
  * @versión (Mayo 2015)

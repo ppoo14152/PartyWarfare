@@ -3,8 +3,8 @@ import java.util.*;
 import java.awt.Color;
 
 /**
- * Escribe una descrición de la clase Jugador aquí.
- * 
+ *Este objeto corresponde a la torre del equipo de la luz, la cual cuenta
+ * con un porcentaje de vida, el cual puede ser reducido al ser atacada por enemigos.
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
  * @versión (Mayo 2015)

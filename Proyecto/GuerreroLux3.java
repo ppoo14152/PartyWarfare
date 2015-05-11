@@ -1,8 +1,9 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase GuerreroLux3 aquí.
- * 
+  Este objeto es el guerrero más fuerte del equipo de la luz
+ * se mueve y ataca a sus enemigos; para llevarlo al campo de batalla se 
+ * requieren x monedas
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
  * @versión (Mayo 2015)

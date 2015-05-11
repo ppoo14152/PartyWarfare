@@ -1,7 +1,9 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase GuerreroDark1 aquí.
+ * Este objeto es el guerrero menos poderoso del equipo de la oscuridad
+ * se mueve y ataca a sus enemigos;para llevarlo al campo de batalla se 
+ * requieren x monedas.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

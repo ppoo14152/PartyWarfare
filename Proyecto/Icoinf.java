@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Icoinf here.
+ * Boton que al presionarse nos mostrará la pantalla de ayuda.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

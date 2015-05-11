@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Icoau here.
+ * Este boton, al presionarlo, nos mostrará la pantalla de "autores".
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

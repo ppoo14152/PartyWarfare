@@ -2,7 +2,7 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * Escribe una descrición de la clase Torres aquí.
+ * La subclase "Torre".
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

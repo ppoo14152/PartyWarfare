@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase BotonHome aquí.
+ * El boton "home" al presionarse nos regresa a la pantalla del incio del juego.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

@@ -1,7 +1,8 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Prev aquí.
+ * Este boton  funciona dentro del menú de selección de escenario, al presionarlo
+ * se cambia al escenario previo.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

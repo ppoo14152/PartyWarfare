@@ -2,8 +2,8 @@ import greenfoot.*;
 import java.awt.Color;
 
 /**
- * Escribe una descrición de la clase FinalEscenario aquí.
- * 
+ * FinalEscenario nos muestra al final del juego, dependiendo del resultado, 
+ * una imagen en caso de resultar ganador, y otra se se pierde.
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
  * @versión (Mayo 2015)

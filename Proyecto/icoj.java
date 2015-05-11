@@ -1,7 +1,8 @@
 import greenfoot.*;
 
 /**
- * Write a description of class icoj here.
+ * Este boton inicializa el juego, nos llevará a la pantalla de selección de equipo y después
+ * a la pantalla de selección de escenario.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

@@ -1,7 +1,8 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Play aquí.
+ * Este botón aparece en la pantalla de selección de escenario,
+ * al presionarse se inicializa el juego en el escenario seleccionado.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

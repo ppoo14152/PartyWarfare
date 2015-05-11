@@ -1,8 +1,8 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase BotonW2 aquí.
- * 
+ *Este boton (durante el modo de juego) al presionarse nos genera una piñata guerrera
+ *de poder medio.
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
  * @versión (Mayo 2015)

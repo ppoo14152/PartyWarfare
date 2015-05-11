@@ -2,7 +2,7 @@ import greenfoot.*;
 
 /**
  * esta clase se encarga de mostrar la interfaz para escoger  el bando con el que se quiere jugar
- * ya sea LUZ o OSCURIDAD
+ * ya sea LUZ u OSCURIDAD
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

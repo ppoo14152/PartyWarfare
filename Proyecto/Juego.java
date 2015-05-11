@@ -121,6 +121,9 @@ public class Juego extends World
         addObject(pow,405,513);
     }
 
+    /**
+     @
+     */
     public void act()
     {
         Coins moneda=new Coins();

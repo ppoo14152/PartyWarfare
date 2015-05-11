@@ -3,7 +3,8 @@ import java.util.*;
 import java.awt.Color;
 
 /**
- * Escribe una descrición de la clase Enemigo aquí.
+ * Este objeto corresponde a la torre del equipo de la oscuridad, la cual cuenta
+ * con un porcentaje de vida, el cual puede ser reducido al ser atacada por enemigos.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
