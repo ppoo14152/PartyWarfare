@@ -23,7 +23,7 @@ public class Inicio extends World
     {    
         super(800, 600, 1);//Tamaño de la Pantalla
         
-        GreenfootSound music=new GreenfootSound("Piñaton.mp3");
+        GreenfootSound music=new GreenfootSound("Pi�aton.mp3");
         music.playLoop();
         music.setVolume(0);
         
