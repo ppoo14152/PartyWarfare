@@ -24,6 +24,7 @@ public class GuerreroLux1 extends GuerBueno
     private int dir;
     private int dineroguerra=0;
     private int scoreguerra=0;
+    private int cambio;
     public GuerreroLux1(int unNum)
     {
         if(unNum==1)
@@ -37,6 +38,7 @@ public class GuerreroLux1 extends GuerBueno
         {
             dir=-1;
         }
+        cambio=0;
         setImage(i1);
 
     }
@@ -62,7 +64,7 @@ public class GuerreroLux1 extends GuerBueno
             }
             vida--;
         }
-        else if(objectoEnFrente(dir)==true)
+        else if(objectoEnFrente(dir)==true&&cambio==0)
         {
             setImage(i1);
         }
@@ -112,5 +114,24 @@ public class GuerreroLux1 extends GuerBueno
         score=scoreguerra;
         scoreguerra=0;
         return score;
+    }
+    
+    public void cambiaDireccion()
+    {
+        if(dir==1)
+        {
+            i1.mirrorHorizontally();
+            i2.mirrorHorizontally();
+            i3.mirrorHorizontally();
+            dir=-1;
+        }
+        else
+        {
+            i1.mirrorHorizontally();
+            i2.mirrorHorizontally();
+            i3.mirrorHorizontally();
+            dir=1;
+        }
+        cambio=1;
     }
 }

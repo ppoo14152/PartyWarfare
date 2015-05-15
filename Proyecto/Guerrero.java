@@ -15,6 +15,7 @@ public class Guerrero extends Actor
      * Act - hace lo que Guerrero quiere hacer. Este método se llama "cuando quiera" o whenever
      * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
      */
+    
     private GreenfootImage bum=new GreenfootImage("bum.png");
      public int muevete(int band,GreenfootImage img1,GreenfootImage img2,int dir)
     {
@@ -46,5 +47,5 @@ public class Guerrero extends Actor
        World w=getWorld();
        w.removeObject(this); 
     }
-   
+    
 }

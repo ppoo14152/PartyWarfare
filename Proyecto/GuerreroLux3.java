@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
-  Este objeto es el guerrero más fuerte del equipo de la luz
+Este objeto es el guerrero más fuerte del equipo de la luz
  * se mueve y ataca a sus enemigos; para llevarlo al campo de batalla se 
  * requieren x monedas
  * @author Irvin Alexis Rodriguez Estrada
@@ -24,6 +24,7 @@ public class GuerreroLux3 extends GuerBueno
     private int dir;
     private int dineroguerra=0;
     private int scoreguerra=0;
+    private int cambio;
     public GuerreroLux3(int unNum)
     {
         if(unNum==1)
@@ -37,6 +38,7 @@ public class GuerreroLux3 extends GuerBueno
         {
             dir=-1;
         }
+        cambio=0;
         setImage(i1);
 
     }
@@ -74,13 +76,13 @@ public class GuerreroLux3 extends GuerBueno
                 setImage(i3);
                 band3=0;
             } 
-             int activa=Greenfoot.getRandomNumber(50);
+            int activa=Greenfoot.getRandomNumber(50);
             if(activa==5)
             {
                 scoreguerra=scoreguerra+Greenfoot.getRandomNumber(90);
             }
         }
-        else if(objectoEnFrente(dir)==true)
+        else if(objectoEnFrente(dir)==true&&cambio==0)
         {
             setImage(i1);
         }
@@ -105,12 +107,31 @@ public class GuerreroLux3 extends GuerBueno
         dineroguerra=0;
         return dinero;
     }
-    
+
     public int retribulleScore()
     {
         int score=0;
         score=scoreguerra;
         scoreguerra=0;
         return score;
+    }
+
+    public void cambiaDireccion()
+    {
+        if(dir==1)
+        {
+            i1.mirrorHorizontally();
+            i2.mirrorHorizontally();
+            i3.mirrorHorizontally();
+            dir=-1;
+        }
+        else
+        {
+            i1.mirrorHorizontally();
+            i2.mirrorHorizontally();
+            i3.mirrorHorizontally();
+            dir=1;
+        }
+        cambio=1;
     }
 }

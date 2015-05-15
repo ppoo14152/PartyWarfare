@@ -16,34 +16,60 @@ public class Power extends Actor
     private GreenfootImage low;
     private GreenfootImage high;
     private int interruptor;
-    public Power()
+    private boolean jugador;
+    private boolean enemigo;
+    public Power(boolean jug,boolean ene)
     {
         low=new GreenfootImage("powerlow.png");
         high=new GreenfootImage("powerhigh.png");
         interruptor=0;
+        jugador=jug;
+        enemigo=ene;
     }
-    
+
     public void act() 
     {
-        
+
         if(Greenfoot.mouseClicked(this)&&interruptor==1)
         {
             World w=getWorld();
+            activaPoder(jugador);
             desactivaPower();
             List l1=w.getObjectsAt(601,563,Indicador.class);
             ((Indicador)l1.get(0)).clear();
         }
     }    
-    
+
     public void activaPower()
     {
         setImage(high);
         interruptor=1;
     }
-    
+
     public void desactivaPower()
     {
         setImage(low);
         interruptor=0;
+    }
+
+    public void activaPoder(boolean band)
+    {
+        World w=getWorld();
+        if(band==true)
+        {
+            List<GuerMalo> guerrerosdark=w.getObjects(GuerMalo.class);
+            for(GuerMalo guer:guerrerosdark)
+            {
+                guer.cambiaDireccion();
+            }
+        }
+        else
+        {
+            List<GuerBueno> guerreroslux=w.getObjects(GuerBueno.class);
+            for(GuerBueno guer:guerreroslux)
+            {
+                guer.cambiaDireccion();
+            }
+        }
     }
 }

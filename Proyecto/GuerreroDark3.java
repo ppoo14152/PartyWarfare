@@ -25,6 +25,7 @@ public class GuerreroDark3 extends GuerMalo
     private int dir;
     private int dineroguerra=0;
     private int scoreguerra=0;
+    private int cambio;
     public GuerreroDark3(int unNum) 
     {
         if(unNum==1)
@@ -38,6 +39,7 @@ public class GuerreroDark3 extends GuerMalo
         {
             dir=-1;
         }
+        cambio=0;
         setImage(img1);
 
     }  
@@ -63,7 +65,7 @@ public class GuerreroDark3 extends GuerMalo
             }
             vida--;
         }
-        else if(objectoEnFrente(dir)==true)
+        else if(objectoEnFrente(dir)==true&&cambio==0)
         {
             setImage(img2);
         }
@@ -133,5 +135,24 @@ public class GuerreroDark3 extends GuerMalo
         score=scoreguerra;
         scoreguerra=0;
         return score;
+    }
+    
+        public void cambiaDireccion()
+    {
+        if(dir==1)
+        {
+            img1.mirrorHorizontally();
+            img2.mirrorHorizontally();
+            img3.mirrorHorizontally();
+            dir=-1;
+        }
+        else
+        {
+            img1.mirrorHorizontally();
+            img2.mirrorHorizontally();
+            img3.mirrorHorizontally();
+            dir=1;
+        }
+        cambio=1;
     }
 }

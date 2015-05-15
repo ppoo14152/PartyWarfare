@@ -37,4 +37,6 @@ public abstract class GuerMalo extends Guerrero
     abstract public int retribulleDinero();
     
     abstract public int retribulleScore();
+    
+    abstract public void cambiaDireccion();
 }

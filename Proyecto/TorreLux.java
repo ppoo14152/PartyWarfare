@@ -32,6 +32,7 @@ public class TorreLux extends Torre
     private Jugador jugador;
     private GreenfootSound musica;
     private Records records;
+    private int pow;
     public TorreLux(boolean band,int dif,Jugador jug,GreenfootSound m)
     {
         if(band==true)
@@ -82,6 +83,13 @@ public class TorreLux extends Torre
             if(n==0)
                 activaRango=1;
             n++;
+            pow=Greenfoot.getRandomNumber(500);
+            if(pow==50)
+            {
+                World w=getWorld();
+                List l1=w.getObjectsAt(405,513,Power.class);
+                ((Power)l1.get(0)).activaPoder(true);
+            }
         }
         if(isTouching(GuerMalo.class))
         {

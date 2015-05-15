@@ -27,6 +27,7 @@ public class GuerreroLux2 extends GuerBueno
     private int dir;
     private int dineroguerra=0;
     private int scoreguerra=0;
+    private int cambio;
     public GuerreroLux2(int unNum)
     {
         if(unNum==1)
@@ -42,6 +43,7 @@ public class GuerreroLux2 extends GuerBueno
         {
             dir=-1;
         }
+        cambio=0;
         setImage(i1);
 
     }
@@ -95,7 +97,7 @@ public class GuerreroLux2 extends GuerBueno
                 scoreguerra=scoreguerra+Greenfoot.getRandomNumber(90);
             }
         }
-        else if(objectoEnFrente(dir)==true)
+        else if(objectoEnFrente(dir)==true&&cambio==0)
         {
             setImage(i1);
         }
@@ -128,5 +130,28 @@ public class GuerreroLux2 extends GuerBueno
         score=scoreguerra;
         scoreguerra=0;
         return score;
+    }
+    
+        public void cambiaDireccion()
+    {
+        if(dir==1)
+        {
+            i1.mirrorHorizontally();
+            i2.mirrorHorizontally();
+            i3.mirrorHorizontally();
+            i4.mirrorHorizontally();
+            i5.mirrorHorizontally();
+            dir=-1;
+        }
+        else
+        {
+            i1.mirrorHorizontally();
+            i2.mirrorHorizontally();
+            i3.mirrorHorizontally();
+            i4.mirrorHorizontally();
+            i5.mirrorHorizontally();
+            dir=1;
+        }
+        cambio=1;
     }
 }

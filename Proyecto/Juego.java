@@ -88,10 +88,12 @@ public class Juego extends World
             TorreDark e=new TorreDark(false,dificultad,jug,musica);
             addObject(j,34,284);
             addObject(e,766,285);
-            Letrero oscuridadteam=new Letrero("PiÃ±atas de la Oscuridad",Color.RED);
+            Letrero oscuridadteam=new Letrero("Piñatas de la Oscuridad",Color.RED);
             addObject(oscuridadteam,607,90);
-            Letrero luzteam=new Letrero("PiÃ±atas de la Luz",Color.CYAN);
+            Letrero luzteam=new Letrero("Piñatas de la Luz",Color.CYAN);
             addObject(luzteam,153,89);
+            Power pow=new Power(true,false);
+            addObject(pow,405,513);
         }
         else
         {
@@ -99,10 +101,12 @@ public class Juego extends World
             TorreDark j=new TorreDark(true,dificultad,jug,musica);
             addObject(j,34,284);
             addObject(e,766,285);
-            Letrero oscuridadteam=new Letrero("PiÃ±atas de la Oscuridad",Color.RED);
+            Letrero oscuridadteam=new Letrero("Piñatas de la Oscuridad",Color.RED);
             addObject(oscuridadteam,195,89);
-            Letrero luzteam=new Letrero("PiÃ±atas de la Luz",Color.CYAN);
+            Letrero luzteam=new Letrero("Piñatas de la Luz",Color.CYAN);
             addObject(luzteam,648,88);
+            Power pow=new Power(false,true);
+            addObject(pow,405,513);
         }
         BotonW1 boton1=new BotonW1();
         addObject(boton1,293,508);
@@ -117,8 +121,6 @@ public class Juego extends World
         timer=new SimpleTimer();
         Indicador indice=new Indicador();
         addObject(indice,601,563);
-        Power pow=new Power();
-        addObject(pow,405,513);
     }
 
     /**

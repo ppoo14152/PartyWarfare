@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=int\ retribulleDinero()
 comment3.params=
 comment3.target=int\ retribulleScore()
-numComments=4
+comment4.params=
+comment4.target=void\ cambiaDireccion()
+numComments=5
