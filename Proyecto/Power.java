@@ -54,7 +54,42 @@ public class Power extends Actor
 
     public void activaPoder(boolean band)
     {
-        aumentaDinero(band);
+        int p;
+        p=eligePoder();
+        switch(p)
+        {
+            case 0:
+            {
+                atraso(band);
+                break;
+            }
+            case 1:
+            {
+                aumentaSalud(band);
+                break;
+            }
+            case 2:
+            {
+                aumentaDinero(band);
+                break;
+            }
+            case 3:
+            {
+                danoEnemigo(band);
+                break;
+            }
+            case 4:
+            {
+                exticion();
+                break;
+            }
+        }
+        
+    }
+    
+    public int eligePoder()
+    {
+        return Greenfoot.getRandomNumber(5);
     }
     
     public void atraso(boolean band)
@@ -105,6 +140,34 @@ public class Power extends Actor
         {
             List l1=w.getObjects(TorreDark.class);
             ((TorreDark)l1.get(0)).aumentaDinero(); 
+        }
+    }
+    
+    public void danoEnemigo(boolean band)
+    {
+         World w=getWorld();
+        if(band==true)
+        {
+            List l1=w.getObjects(TorreDark.class);
+            ((TorreDark)l1.get(0)).danoTorre(30);
+        }
+        else
+        {
+            List l1=w.getObjects(TorreLux.class);
+            ((TorreLux)l1.get(0)).danoTorre(30); 
+        }
+    }
+    
+    public void exticion()
+    {
+        World w=getWorld();
+        List<Guerrero> guerreros=w.getObjects(Guerrero.class);
+        if(guerreros.isEmpty()==false)
+        {
+            for(Guerrero guer:guerreros)
+            {
+                guer.muere();
+            }
         }
     }
 }

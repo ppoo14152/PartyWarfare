@@ -97,19 +97,8 @@ public class TorreDark extends Torre
         {
             int atk=Greenfoot.getRandomNumber(35);
             if(atk==5)
-                finish=afectado(10,bd,vid);
-            if(finish==1)
             {
-                World w=getWorld();
-                if(bd==false)
-                {
-                    List torre=w.getObjects(TorreLux.class);
-                    score=((TorreLux)torre.get(0)).getScore();
-                }
-                jugador.setScore(score);
-                records.guardaRecords(score);
-                w=new FinalEscenario(bd,jugador,musica);
-                Greenfoot.setWorld(w);
+                danoTorre(10);
             }
         }
 
@@ -251,6 +240,24 @@ public class TorreDark extends Torre
         {
             dinero=dinero+500;
             countdinero.modificaLetrero(""+dinero,Color.white);
+        }
+    }
+
+    public void danoTorre(int dano)
+    {
+        finish=afectado(dano,bd,vid);
+        if(finish==1)
+        {
+            World w=getWorld();
+            if(bd==false)
+            {
+                List torre=w.getObjects(TorreLux.class);
+                score=((TorreLux)torre.get(0)).getScore();
+            }
+            jugador.setScore(score);
+            records.guardaRecords(score);
+            w=new FinalEscenario(bd,jugador,musica);
+            Greenfoot.setWorld(w);
         }
     }
 } 
