@@ -237,4 +237,18 @@ public class TorreLux extends Torre
     {
         return score;
     }
+    
+      public void masSalud()
+    {
+        rebilitado(30,bd,vid);
+    }
+    
+    public void aumentaDinero()
+    {
+        if(bd==true)
+        {
+            dinero=dinero+500;
+            countdinero.modificaLetrero(""+dinero,Color.white);
+        }
+    }
 }

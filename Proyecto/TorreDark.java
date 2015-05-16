@@ -114,6 +114,7 @@ public class TorreDark extends Torre
         }
 
     } 
+
     public void actuaJugador()
     {
         World w=getWorld();
@@ -237,6 +238,20 @@ public class TorreDark extends Torre
     public int getScore()
     {
         return score;
+    }
+
+    public void masSalud()
+    {
+        rebilitado(30,bd,vid);
+    }
+
+    public void aumentaDinero()
+    {
+        if(bd==true)
+        {
+            dinero=dinero+500;
+            countdinero.modificaLetrero(""+dinero,Color.white);
+        }
     }
 } 
 

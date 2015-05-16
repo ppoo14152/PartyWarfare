@@ -5,4 +5,6 @@ comment1.params=b
 comment1.target=Vida\ creaVida(boolean)
 comment2.params=dano\ b\ vid
 comment2.target=int\ afectado(int,\ boolean,\ Vida)
-numComments=3
+comment3.params=inc\ b\ vid
+comment3.target=void\ rebilitado(int,\ boolean,\ Vida)
+numComments=4

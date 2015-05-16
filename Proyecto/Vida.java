@@ -51,6 +51,36 @@ public class Vida extends Actor
             return 1;
         }
     }
+    
+    public int incrementaVida(int inc,GreenfootImage vd)
+    {
+        if(tope(inc,vd)==false)
+        {
+            int vid=(vd.getWidth())+inc;
+            GreenfootImage vida =new GreenfootImage(vid, 20);
+            if(vid>176)
+            {
+                vida.setColor(Color.GREEN);
+            }
+            else if(vid>88)
+            {
+                vida.setColor(Color.ORANGE);
+            }
+            else
+            {
+                vida.setColor(Color.RED);
+            }
+            vida.fill();
+            setImage(vida);
+            return 0;
+        }
+        else
+        {
+            setImage(vd);
+            return 1;
+        }
+        
+    }
 
     public boolean basta(int dano,GreenfootImage vd)
     {
@@ -59,4 +89,13 @@ public class Vida extends Actor
         else
             return false;
     }
+    
+    public boolean tope(int inc,GreenfootImage vd)
+    {
+        if(vd.getWidth()+inc>262)
+          return true;
+        else
+          return false;
+    }
+   
 }

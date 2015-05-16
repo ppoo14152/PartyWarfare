@@ -33,26 +33,43 @@ public class Torre extends Actor
             else
                 return false;
         }
-        
+
     }
+
     public Vida creaVida(boolean b)
     {
         World w=getWorld();
         vd=new Vida();
         if(b==true)
-        w.addObject(vd,187,48);
+            w.addObject(vd,187,48);
         else
-        w.addObject(vd,620,48);
+            w.addObject(vd,620,48);
         return vd;
     }
-     public int afectado(int dano,boolean b,Vida vid)
+
+    public int afectado(int dano,boolean b,Vida vid)
     {
         int alert;
         alert=vid.reduceVida(dano,vid.getImage());
         if(b==true)
-        vid.setLocation(vid.getX()-dano/2,48);
+            vid.setLocation(vid.getX()-dano/2,48);
         else
-        vid.setLocation(vid.getX()+dano/2,48);
+            vid.setLocation(vid.getX()+dano/2,48);
         return alert;
     }
+
+    public void rebilitado(int inc,boolean b,Vida vid)
+    {
+        int interup;
+        interup=vid.incrementaVida(inc,vid.getImage());
+        if(interup==0)
+        {
+            if(b==true)
+                vid.setLocation(vid.getX()+inc/2,48);
+            else
+                vid.setLocation(vid.getX()-inc/2,48);
+        }
+
+    }
+
 }

@@ -54,7 +54,12 @@ public class Power extends Actor
 
     public void activaPoder(boolean band)
     {
-        World w=getWorld();
+        aumentaDinero(band);
+    }
+    
+    public void atraso(boolean band)
+    {
+       World w=getWorld();
         if(band==true)
         {
             List<GuerMalo> guerrerosdark=w.getObjects(GuerMalo.class);
@@ -70,6 +75,36 @@ public class Power extends Actor
             {
                 guer.cambiaDireccion();
             }
+        } 
+    }
+    
+    public void aumentaSalud(boolean band)
+    {
+        World w=getWorld();
+        if(band==true)
+        {
+            List l1=w.getObjects(TorreLux.class);
+            ((TorreLux)l1.get(0)).masSalud();
+        }
+        else
+        {
+            List l1=w.getObjects(TorreDark.class);
+            ((TorreDark)l1.get(0)).masSalud(); 
+        }
+    }
+    
+    public void aumentaDinero(boolean band)
+    {
+          World w=getWorld();
+        if(band==true)
+        {
+            List l1=w.getObjects(TorreLux.class);
+            ((TorreLux)l1.get(0)).aumentaDinero();
+        }
+        else
+        {
+            List l1=w.getObjects(TorreDark.class);
+            ((TorreDark)l1.get(0)).aumentaDinero(); 
         }
     }
 }
