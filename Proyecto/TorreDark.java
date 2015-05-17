@@ -84,7 +84,7 @@ public class TorreDark extends Torre
             if(n==0)
                 activaRango=1;
             n++;
-            pow=Greenfoot.getRandomNumber(500);
+            pow=Greenfoot.getRandomNumber(500000);
             if(pow==50)
             {
                 World w=getWorld();

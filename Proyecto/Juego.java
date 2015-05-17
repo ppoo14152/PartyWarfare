@@ -31,6 +31,9 @@ public class Juego extends World
     private int dificultad;
     private GreenfootSound musica;
     private SimpleTimer timer;
+    private SimpleTimer timerfire;
+    private int activafire;
+    private int activaice;
     /**
      * METODO CONSTRUCTOR
      * este es el costructor inicial del juego y este propone las instancias iniciales del mundo
@@ -119,12 +122,15 @@ public class Juego extends World
         Letrero score=new Letrero("SCORE",Color.BLACK);
         addObject(score,666,469);
         timer=new SimpleTimer();
+        timerfire=new SimpleTimer();
         Indicador indice=new Indicador();
         addObject(indice,601,563);
+        activafire=0;
+        activafire=0;
     }
 
     /**
-     @
+    @
      */
     public void act()
     {
@@ -135,5 +141,22 @@ public class Juego extends World
             addObject(moneda,Greenfoot.getRandomNumber(800),146);
             timer.mark();
         }
+
+        if(activafire!=0)
+        {
+            Fireball bola=new Fireball();
+
+            if(timerfire.millisElapsed()>103)
+            {
+                addObject(bola,Greenfoot.getRandomNumber(800),146);
+                timerfire.mark();
+            }
+            activafire--;
+        }
+    }
+
+    public void activaFire()
+    {
+        activafire=100;
     }
 }

@@ -82,6 +82,10 @@ public class GuerreroLux3 extends GuerBueno
                 scoreguerra=scoreguerra+Greenfoot.getRandomNumber(90);
             }
         }
+         else if(isTouching(Iceball.class)||isTouching(Fireball.class))
+        {
+            vida=-1;
+        }
         else if(objectoEnFrente(dir)==true&&cambio==0)
         {
             setImage(i1);

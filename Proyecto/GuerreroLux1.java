@@ -68,6 +68,10 @@ public class GuerreroLux1 extends GuerBueno
         {
             setImage(i1);
         }
+        else if(isTouching(Iceball.class)||isTouching(Fireball.class))
+        {
+            vida=-1;
+        }
         else if(isTouching(TorreDark.class))
         {
             if(band3==0)

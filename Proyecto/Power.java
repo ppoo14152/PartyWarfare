@@ -84,6 +84,16 @@ public class Power extends Actor
                 exticion();
                 break;
             }
+            case 5:
+            {
+                fireBalls();
+                break;
+            }
+            case 6:
+            {
+                iceBalls();
+                break;
+            }
         }
 
     }
@@ -96,7 +106,7 @@ public class Power extends Actor
         World w=getWorld();
         for(i=0;i<5;i++)
         {
-            ind=Greenfoot.getRandomNumber(5);
+            ind=Greenfoot.getRandomNumber(7);
             poder.cambiaImagen(ind);
             w.addObject(poder,415,288);
             if(i!=4)
@@ -183,6 +193,29 @@ public class Power extends Actor
             for(Guerrero guer:guerreros)
             {
                 guer.muere();
+            }
+        }
+    }
+
+    public void fireBalls()
+    {
+        int i;
+        World w=getWorld();
+        
+        ((Juego)w).activaFire();
+    }
+    
+    public void iceBalls()
+    {
+        int i;
+        World w=getWorld();
+        
+        for(i=0;i<200;i++)
+        {
+            Iceball bola=new Iceball();
+            if(Greenfoot.getRandomNumber(40)==20)
+            {
+                w.addObject(bola,Greenfoot.getRandomNumber(800),146);
             }
         }
     }

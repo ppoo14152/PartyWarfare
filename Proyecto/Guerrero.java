@@ -34,7 +34,7 @@ public class Guerrero extends Actor
     }
     public void estaAlBorde()
     {
-         if(isAtEdge())
+        if(isAtEdge())
         {
             World w=getWorld();
             w.removeObject(this);
