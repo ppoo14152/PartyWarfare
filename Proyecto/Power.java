@@ -104,6 +104,7 @@ public class Power extends Actor
                 invocaTornado(band);
                 break;
             }
+            
         }
 
     }
@@ -244,4 +245,5 @@ public class Power extends Actor
             w.addObject(tor,145,310);
         }
     }
+    
 }

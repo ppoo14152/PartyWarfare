@@ -99,6 +99,7 @@ public class TorreLux extends Torre
                 danoTorre(10);
             }
         }
+        
     } 
 
     public void actuaJugador()

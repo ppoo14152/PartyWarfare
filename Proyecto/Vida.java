@@ -84,7 +84,7 @@ public class Vida extends Actor
 
     public boolean basta(int dano,GreenfootImage vd)
     {
-        if(vd.getWidth()<dano)
+        if(vd.getWidth()<=dano)
             return true;
         else
             return false;

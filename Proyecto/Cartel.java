@@ -76,11 +76,7 @@ public class Cartel extends Actor
                 setImage(tornado);
                 break;
             }
-             case 9:
-            {
-                setImage(tanque);
-                break;
-            }
+            
         }
     }
 }
