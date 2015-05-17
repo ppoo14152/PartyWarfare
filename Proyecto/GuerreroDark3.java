@@ -69,7 +69,11 @@ public class GuerreroDark3 extends GuerMalo
         {
             setImage(img2);
         }
-        else if(isTouching(Iceball.class)||isTouching(Fireball.class))
+        else if(isTouching(Iceball.class)||isTouching(Fireball.class)||isTouching(Rayo.class))
+        {
+            vida=-1;
+        }
+        else if(isTouching(Tornado.class))
         {
             vida=-1;
         }

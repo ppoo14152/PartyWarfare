@@ -94,6 +94,16 @@ public class Power extends Actor
                 iceBalls();
                 break;
             }
+            case 7:
+            {
+                invocaOvni();
+                break;
+            }
+            case 8:
+            {
+                invocaTornado(band);
+                break;
+            }
         }
 
     }
@@ -106,7 +116,7 @@ public class Power extends Actor
         World w=getWorld();
         for(i=0;i<5;i++)
         {
-            ind=Greenfoot.getRandomNumber(7);
+            ind=Greenfoot.getRandomNumber(9);
             poder.cambiaImagen(ind);
             w.addObject(poder,415,288);
             if(i!=4)
@@ -210,13 +220,28 @@ public class Power extends Actor
         int i;
         World w=getWorld();
         
-        for(i=0;i<200;i++)
+        ((Juego)w).activaIce();
+    }
+    
+    public void invocaOvni()
+    {
+        World w=getWorld();
+        Ovni ov=new Ovni();
+        w.addObject(ov,145,159);
+    }
+    
+    public void invocaTornado(boolean band)
+    {
+        World w=getWorld();
+        if(band==true)
         {
-            Iceball bola=new Iceball();
-            if(Greenfoot.getRandomNumber(40)==20)
-            {
-                w.addObject(bola,Greenfoot.getRandomNumber(800),146);
-            }
+            Tornado tor=new Tornado(-1);
+            w.addObject(tor,657,310);
+        }
+        else
+        {
+            Tornado tor=new Tornado(1);
+            w.addObject(tor,145,310);
         }
     }
 }

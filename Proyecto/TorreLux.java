@@ -83,7 +83,7 @@ public class TorreLux extends Torre
             if(n==0)
                 activaRango=1;
             n++;
-            pow=Greenfoot.getRandomNumber(500000);
+            pow=Greenfoot.getRandomNumber(1000);
             if(pow==50)
             {
                 World w=getWorld();
@@ -249,8 +249,8 @@ public class TorreLux extends Torre
             World w=getWorld();
             if(bd==false)
             {
-                List torre=w.getObjects(TorreLux.class);
-                score=((TorreLux)torre.get(0)).getScore();
+                List torre=w.getObjects(TorreDark.class);
+                score=((TorreDark)torre.get(0)).getScore();
             }
             jugador.setScore(score);
             records.guardaRecords(score);

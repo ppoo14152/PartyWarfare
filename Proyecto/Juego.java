@@ -32,6 +32,7 @@ public class Juego extends World
     private GreenfootSound musica;
     private SimpleTimer timer;
     private SimpleTimer timerfire;
+    private SimpleTimer timerice;
     private int activafire;
     private int activaice;
     /**
@@ -123,6 +124,7 @@ public class Juego extends World
         addObject(score,666,469);
         timer=new SimpleTimer();
         timerfire=new SimpleTimer();
+        timerice=new SimpleTimer();
         Indicador indice=new Indicador();
         addObject(indice,601,563);
         activafire=0;
@@ -146,17 +148,34 @@ public class Juego extends World
         {
             Fireball bola=new Fireball();
 
-            if(timerfire.millisElapsed()>103)
+            if(timerfire.millisElapsed()>2000)
             {
                 addObject(bola,Greenfoot.getRandomNumber(800),146);
                 timerfire.mark();
             }
             activafire--;
         }
+        
+        if(activaice!=0)
+        {
+            Iceball bola=new Iceball();
+
+            if(timerice.millisElapsed()>2000)
+            {
+                addObject(bola,Greenfoot.getRandomNumber(800),146);
+                timerice.mark();
+            }
+            activaice--;
+        }
     }
 
     public void activaFire()
     {
-        activafire=100;
+        activafire=1000;
+    }
+    
+    public void activaIce()
+    {
+        activaice=1000;
     }
 }
