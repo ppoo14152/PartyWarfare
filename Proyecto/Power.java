@@ -18,6 +18,7 @@ public class Power extends Actor
     private int interruptor;
     private boolean jugador;
     private boolean enemigo;
+    private Cartel poder;
     public Power(boolean jug,boolean ene)
     {
         low=new GreenfootImage("powerlow.png");
@@ -84,17 +85,32 @@ public class Power extends Actor
                 break;
             }
         }
-        
+
     }
-    
+
     public int eligePoder()
     {
-        return Greenfoot.getRandomNumber(5);
+        int ind=0; 
+        int i;
+        poder=new Cartel();
+        World w=getWorld();
+        for(i=0;i<5;i++)
+        {
+            ind=Greenfoot.getRandomNumber(5);
+            poder.cambiaImagen(ind);
+            w.addObject(poder,415,288);
+            if(i!=4)
+                Greenfoot.delay(5);
+            else
+                Greenfoot.delay(20);
+            w.removeObject(poder);
+        }
+        return ind;
     }
-    
+
     public void atraso(boolean band)
     {
-       World w=getWorld();
+        World w=getWorld();
         if(band==true)
         {
             List<GuerMalo> guerrerosdark=w.getObjects(GuerMalo.class);
@@ -112,7 +128,7 @@ public class Power extends Actor
             }
         } 
     }
-    
+
     public void aumentaSalud(boolean band)
     {
         World w=getWorld();
@@ -127,10 +143,10 @@ public class Power extends Actor
             ((TorreDark)l1.get(0)).masSalud(); 
         }
     }
-    
+
     public void aumentaDinero(boolean band)
     {
-          World w=getWorld();
+        World w=getWorld();
         if(band==true)
         {
             List l1=w.getObjects(TorreLux.class);
@@ -142,10 +158,10 @@ public class Power extends Actor
             ((TorreDark)l1.get(0)).aumentaDinero(); 
         }
     }
-    
+
     public void danoEnemigo(boolean band)
     {
-         World w=getWorld();
+        World w=getWorld();
         if(band==true)
         {
             List l1=w.getObjects(TorreDark.class);
@@ -157,7 +173,7 @@ public class Power extends Actor
             ((TorreLux)l1.get(0)).danoTorre(30); 
         }
     }
-    
+
     public void exticion()
     {
         World w=getWorld();
