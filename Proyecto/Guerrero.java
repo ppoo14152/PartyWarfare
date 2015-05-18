@@ -43,7 +43,7 @@ public class Guerrero extends Actor
     public void muere()
     {
        setImage(bum);
-       Greenfoot.delay(15);
+       Greenfoot.delay(4);
        World w=getWorld();
        w.removeObject(this); 
     }

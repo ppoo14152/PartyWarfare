@@ -33,7 +33,8 @@ public class TorreDark extends Torre
     private Jugador jugador;
     private GreenfootSound musica;
     private Records records;
-    private int pow;
+   private SimpleTimer time;
+    private SimpleTimer timenemigo;
     public TorreDark(boolean band,int dif,Jugador jug, GreenfootSound m)
     {
         if(band==true)
@@ -51,6 +52,8 @@ public class TorreDark extends Torre
         records=new Records();
         d=dif;
         musica=m;
+        time=new SimpleTimer();
+        timenemigo=new SimpleTimer();
     }
 
     public void act() 
@@ -84,12 +87,12 @@ public class TorreDark extends Torre
             if(n==0)
                 activaRango=1;
             n++;
-            pow=Greenfoot.getRandomNumber(5000);
-            if(pow==50)
+            if(time.millisElapsed()>60000)
             {
                 World w=getWorld();
                 List l1=w.getObjectsAt(405,513,Power.class);
                 ((Power)l1.get(0)).activaPoder(false);
+                time.mark();
             }
         }
 
@@ -146,7 +149,7 @@ public class TorreDark extends Torre
     public int actuaEnemigo(int n)
     {
         World w=getWorld();
-        if(n>rango)
+        if(timenemigo.millisElapsed()>10000)
         {
             if(noHayObjectos(1)==true)
             {
@@ -206,6 +209,7 @@ public class TorreDark extends Torre
                 }
             }
             n=0;
+            timenemigo.mark();
         } 
         return n;
     }

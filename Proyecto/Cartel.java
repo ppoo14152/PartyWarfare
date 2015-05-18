@@ -21,7 +21,6 @@ public class Cartel extends Actor
     final GreenfootImage iceball=new GreenfootImage("ice.png");
     final GreenfootImage ovni=new GreenfootImage("ovni.png");
     final GreenfootImage tornado=new GreenfootImage("tornado.png");
-    final GreenfootImage tanque=new GreenfootImage("tanque.png");
     public void act() 
     {
         // Agrega tus códigos de acción aquí.

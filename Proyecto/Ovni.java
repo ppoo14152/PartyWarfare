@@ -16,20 +16,25 @@ public class Ovni extends Actor
     private int segundavuelta;
     private int terceravuelta;
     private int finvuelta;
+    private SimpleTimer timerayo;
     public Ovni()
     {
         primeravuelta=1;
         segundavuelta=0;
         terceravuelta=0;
         finvuelta=0;
+        timerayo=new SimpleTimer();
     }
 
     public void act() 
     {
         Rayo ray=new Rayo();
         World w=getWorld();
-        if(Greenfoot.getRandomNumber(120)==5)
+        if(timerayo.millisElapsed()>6000)
+        {
            w.addObject(ray,getX(),getY()+86);
+           timerayo.mark();
+        }
         if(primeravuelta==1)
         {
             move(1);

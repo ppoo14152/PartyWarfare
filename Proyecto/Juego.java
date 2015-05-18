@@ -171,11 +171,11 @@ public class Juego extends World
 
     public void activaFire()
     {
-        activafire=1000;
+        activafire=500;
     }
     
     public void activaIce()
     {
-        activaice=1000;
+        activaice=500;
     }
 }

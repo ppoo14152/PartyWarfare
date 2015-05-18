@@ -46,13 +46,13 @@ public class Tornado extends Actor
         {
             img1.mirrorHorizontally();
             setImage(img1);
-            select=0; 
+            select++; 
         }
         else
         {
             img1.mirrorHorizontally();
             setImage(img1);
-            select=1;
+            select=0;
         }
     }    
 }

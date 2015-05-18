@@ -30,7 +30,7 @@ public class Iceball extends Actor
         if(y==404)
         {
             setImage(explosion);
-            Greenfoot.delay(5);
+            Greenfoot.delay(1);
             w=getWorld();
             w.removeObject(this);
         }

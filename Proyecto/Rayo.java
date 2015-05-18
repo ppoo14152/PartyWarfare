@@ -30,7 +30,7 @@ public class Rayo extends Actor
         if(y==404)
         {
             setImage(explosion);
-            Greenfoot.delay(15);
+            Greenfoot.delay(1);
             w=getWorld();
             w.removeObject(this);
         }
