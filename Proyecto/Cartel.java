@@ -1,10 +1,14 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Cartel aquí.
+ * La clase cartel se utiliza para mostrar en pantalla durante la ejecución del juego los diferentes
+ * iconos de los poderes que puede utilizarse, su selección es aleatoria y tanto ele enmigo como
+ * el jugador, pueden utilizarlo.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versión (17.15.2015)
  */
 public class Cartel extends Actor
 {

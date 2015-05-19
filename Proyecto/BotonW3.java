@@ -1,8 +1,8 @@
 import greenfoot.*;
 
 /**
- * Este boton (durante el modo de juego) al presionarse nos genera una piñata guerrera
- * en este caso, la más fuerte de las tres.
+ * Este boton (durante el modo de juego) al presionarse nos genera una pinata guerrera
+ * en este caso, la mas fuerte de las tres.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
@@ -18,12 +18,14 @@ public class BotonW3 extends Actor
     private boolean botonactivado;
     private GreenfootImage imgact;
     private GreenfootImage imgnoact;
-    public BotonW3()
+    private int time;
+    public BotonW3(int tb)
     {
         botonactivado=true;
         timer=new SimpleTimer();
         imgact=new GreenfootImage("BtnWarrior3.png"); 
         imgnoact=new GreenfootImage("BtnWarrior3.2.png"); 
+        time=tb;
     }
 
     public void act() 
@@ -34,7 +36,7 @@ public class BotonW3 extends Actor
             timer.mark();
             setImage(imgnoact);
         }
-        if(timer.millisElapsed()>10300)
+        if(timer.millisElapsed()>time)
         {
             botonactivado=true;
             setImage(imgact);

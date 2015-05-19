@@ -1,10 +1,13 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Ovni aquí.
+ * La clase ovni es un poder, la cual nos aparece un ovni sobrevolando a los personajes
+ * este ovni tiene la funcion de atacar a los personajes, lanzándoles un rayo (esfera verde).
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versión (17.15.2015)
  */
 public class Ovni extends Actor
 {

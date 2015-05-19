@@ -1,10 +1,13 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Fireball aquí.
+ * La clase fireball o bola de fuego, es un poder, el cual hace que lsa bolas de fuego
+ * se desplacen hacia abajo dañando a todos los personajes que toque.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versión (17.15.2015)
  */
 public class Fireball extends Actor
 {

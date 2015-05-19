@@ -2,7 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.*;
 
 /**
- * Escribe una descrición de la clase Vida aquí.
+ * La clase vida representa la salud de las torres, la cual al ser atacada disminuye y cambia de color
+ * dependiendo del da�o que haya recibido.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez

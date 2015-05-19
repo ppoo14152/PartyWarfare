@@ -36,6 +36,7 @@ public class Juego extends World
     private int activafire;
     private int activaice;
     private int time;
+    private int timebotton;
     /**
      * METODO CONSTRUCTOR
      * este es el costructor inicial del juego y este propone las instancias iniciales del mundo
@@ -55,6 +56,7 @@ public class Juego extends World
             musica.setVolume(1);
             setBackground("Fondo16.jpg");
             time=10000;
+            timebotton=2000;
         }
         else if(escenario==USA)
         {
@@ -64,6 +66,7 @@ public class Juego extends World
             musica.setVolume(1);
             setBackground("Fondo15.jpg");
             time=10000;
+            timebotton=2000;
         }
         else if(escenario==FRANCE)
         {
@@ -73,6 +76,7 @@ public class Juego extends World
             musica.setVolume(1);
             setBackground("Fondo14.jpg");
             time=8000;
+            timebotton=4000;
         }
         else if(escenario==EGYPT)
         {
@@ -82,6 +86,7 @@ public class Juego extends World
             musica.setVolume(1);
             setBackground("Fondo12.jpg");
             time=8000;
+            timebotton=4000;
         }
         else 
         {
@@ -91,6 +96,7 @@ public class Juego extends World
             musica.setVolume(1);
             setBackground("Fondo13.jpg");
             time=5000;
+            timebotton=8000;
         }
         if(jug.getBando()==true)
         {
@@ -118,11 +124,11 @@ public class Juego extends World
             Power pow=new Power(false,true);
             addObject(pow,405,513);
         }
-        BotonW1 boton1=new BotonW1();
+        BotonW1 boton1=new BotonW1(timebotton);
         addObject(boton1,293,508);
-        BotonW2 boton2=new BotonW2();
+        BotonW2 boton2=new BotonW2(timebotton);
         addObject(boton2,182,508);
-        BotonW3 boton3=new BotonW3();
+        BotonW3 boton3=new BotonW3(timebotton);
         addObject(boton3,69,508);
         Letrero dineroText=new Letrero("DINERO",Color.BLACK);
         addObject(dineroText,520,471);

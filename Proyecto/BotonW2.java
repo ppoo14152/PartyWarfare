@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- *Este boton (durante el modo de juego) al presionarse nos genera una piñata guerrera
+ *Este boton (durante el modo de juego) al presionarse nos genera una pinata guerrera
  *de poder medio.
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
@@ -17,12 +17,14 @@ public class BotonW2 extends Actor
     private boolean botonactivado;
     private GreenfootImage imgact;
     private GreenfootImage imgnoact;
-    public BotonW2()
+    private int time;
+    public BotonW2(int tb)
     {
         botonactivado=true;
         timer=new SimpleTimer();
         imgact=new GreenfootImage("BtnWarrior2.png"); 
         imgnoact=new GreenfootImage("BtnWarrior2.2.png"); 
+        time=tb;
     }
     public void act() 
     {
@@ -32,7 +34,7 @@ public class BotonW2 extends Actor
            timer.mark();
            setImage(imgnoact);
        }
-       if(timer.millisElapsed()>9300)
+       if(timer.millisElapsed()>time)
        {
           botonactivado=true; 
           setImage(imgact);

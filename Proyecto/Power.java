@@ -2,10 +2,13 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * Escribe una descrición de la clase Power aquí.
+ * La clase poder es un boton que necesita del indicador para poder utilizarse, si el indicador se llena de estrellas
+ * este boton estara disponible para poder usarse.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versi�n (17.15.2015)
  */
 public class Power extends Actor
 {

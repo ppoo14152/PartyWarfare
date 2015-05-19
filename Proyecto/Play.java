@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Este botón aparece en la pantalla de selección de escenario,
+ * Este boton aparece en la pantalla de seleccion de escenario,
  * al presionarse se inicializa el juego en el escenario seleccionado.
  * 
  * @author Irvin Alexis Rodriguez Estrada

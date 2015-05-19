@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Calse rayo se ocupa cuando se invoca al Ovni y es para matar a los guerreros 
+ * Clase rayo se ocupa cuando se invoca al Ovni y es para matar a los guerreros 
  * durante la ejecucion del mismo.
  * 
  * @autor Irvin Alexis Rodriguez Estrada 

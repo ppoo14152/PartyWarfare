@@ -1,10 +1,13 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Iceball aquí.
+ * La clase iceball o bola de nieve, al igual que la clase fireball es un poder, 
+ * al ser seleccionada aparece bolas de nieve que caen y eliminan a los personajes que toque.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versión (17.15.2015)
  */
 public class Iceball extends Actor
 {

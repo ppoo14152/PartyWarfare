@@ -2,10 +2,13 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * Escribe una descrición de la clase Nuclear aquí.
+ * La clase nuclear es un poder, tiene la funcion de que al ser seleccionada
+ * elimina a todos los personajes que estén en pantalla durante la ejecución de dicho poder.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versión (17.15.2015)
  */
 public class Nuclear extends Actor
 {

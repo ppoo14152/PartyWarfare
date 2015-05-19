@@ -1,10 +1,13 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Tornado aquí.
+ * La clase tornado es un poder, que al ser seleccionado aparece un tornado, el cual inicia del lado 
+ * del equipo que lo haya invocado, y  el cual destruye a los personajes que toque.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versión (17.15.2015)
  */
 public class Tornado extends Actor
 {

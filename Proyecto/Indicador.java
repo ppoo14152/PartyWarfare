@@ -2,10 +2,13 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * Escribe una descrición de la clase Indicador aquí.
+ * La clase indicador representa al contenedor de las estrellas que es necesario acumular para
+ * utilizar uno de los diversos poderes que se tienen.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versi�n (17.15.2015)
  */
 public class Indicador extends Actor
 {

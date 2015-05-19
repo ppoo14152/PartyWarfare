@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=BotonW1()
+comment0.params=tb
+comment0.target=BotonW1(int)
 comment1.params=
 comment1.target=void\ act()
 comment2.params=
