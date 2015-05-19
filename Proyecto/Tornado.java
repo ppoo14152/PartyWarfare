@@ -14,12 +14,21 @@ public class Tornado extends Actor
      */
     private GreenfootImage img1;
     private GreenfootImage img2;
+    private GreenfootImage img3;
+    private GreenfootImage img4;
+    private GreenfootImage img5;
+    private GreenfootImage img6;
     private int select;
     private int direcion;
     public Tornado(int dir)
     {
         img1=new GreenfootImage("tornadu.png");
-        select=1;
+        img2=new GreenfootImage("tornadu.1.png");
+        img3=new GreenfootImage("tornadu.2.png");
+        img4=new GreenfootImage("tornadu.3.png");
+        img5=new GreenfootImage("tornadu.4.png");
+        img6=new GreenfootImage("tornadu.5.png");
+        select=0;
         direcion=dir;
     }
 
@@ -42,17 +51,34 @@ public class Tornado extends Actor
                 w.removeObject(this);
             } 
         }
-        if(select==1)
+        if(select==0)
         {
-            img1.mirrorHorizontally();
             setImage(img1);
-            select++; 
+            select=1; 
         }
-        else
+        else if(select==1)
         {
-            img1.mirrorHorizontally();
-            setImage(img1);
-            select=0;
+            setImage(img2);
+            select=2;
+        }
+        else if(select==2)
+        {
+            setImage(img3);
+            select=3;
+        }
+        else if(select==3)
+        {
+            setImage(img4);
+            select=4;
+        }
+        else if(select==4)
+        {
+            setImage(img5);
+            select=5;
+        }else
+        {
+            setImage(img6);
+            select=0;   
         }
     }    
 }

@@ -24,7 +24,13 @@ public class Icoinf extends Boton
     {
        mouseSobreObjecto(m2);
        cambiaMundo(m,m2);
-    }  
+    } 
+    
+     /**
+     * heredado de la clase abstracta Boton indica si el cursor est sobre el y manda una respuesta visual
+     * 
+     * @param w mundo actual
+     */
      public void mouseSobreObjecto(World w)
     {
           if(Greenfoot.mouseMoved(this))
@@ -36,6 +42,14 @@ public class Icoinf extends Boton
             setImage("ICO4.png");
         }
     }
+    
+     /**
+     * Herado de la clase abstracta Boton si se presiono el objecto con el cursor cambia el 
+     * mundo donde se encuentra
+     * 
+     * @param m musica actual
+     * @param w mundo actual
+     */
     public void cambiaMundo(GreenfootSound m,World w)
     {
         if(Greenfoot.mouseClicked(this))

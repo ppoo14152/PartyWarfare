@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Este boton  funciona dentro del menú de selección de escenario, al presionarlo
+ * Este boton  funciona dentro del menu de seleccion de escenario, al presionarlo
  * se cambia al siguiente escenario.
  * 
  * @author Irvin Alexis Rodriguez Estrada
@@ -10,10 +10,6 @@ import greenfoot.*;
  */
 public class Next extends Boton
 {
-    /**
-     * Act - hace lo que Next quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     static int USA=1;
     static int FRANCE=2;
     static int EGYPT=3;
@@ -37,6 +33,12 @@ public class Next extends Boton
       mouseSobreObjecto(w);
       cambiaMundo(m,w);
     } 
+    
+    /**
+     * heredado de la clase abstracta Boton indica si el cursor est sobre el y manda una respuesta visual
+     * 
+     * @param w mundo actual
+     */
      public void mouseSobreObjecto(World w)
     {
           if(Greenfoot.mouseMoved(this))
@@ -48,6 +50,12 @@ public class Next extends Boton
             setImage("Next.png");
         }
     }
+    
+     /**
+     * heredado de la clase abstracta Boton indica si el cursor est sobre el y manda una respuesta visual
+     * 
+     * @param w mundo actual
+     */
      public void cambiaMundo(GreenfootSound m,World w)
     {
          if(Greenfoot.mouseClicked(this)||Greenfoot.isKeyDown("right"))

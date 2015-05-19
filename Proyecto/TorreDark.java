@@ -33,9 +33,10 @@ public class TorreDark extends Torre
     private Jugador jugador;
     private GreenfootSound musica;
     private Records records;
-   private SimpleTimer time;
+    private int tiempo;
+    private SimpleTimer time;
     private SimpleTimer timenemigo;
-    public TorreDark(boolean band,int dif,Jugador jug, GreenfootSound m)
+    public TorreDark(boolean band,int dif,Jugador jug, GreenfootSound m,int times)
     {
         if(band==true)
         {
@@ -54,6 +55,7 @@ public class TorreDark extends Torre
         musica=m;
         time=new SimpleTimer();
         timenemigo=new SimpleTimer();
+        tiempo=times;
     }
 
     public void act() 
@@ -149,7 +151,7 @@ public class TorreDark extends Torre
     public int actuaEnemigo(int n)
     {
         World w=getWorld();
-        if(timenemigo.millisElapsed()>10000)
+        if(timenemigo.millisElapsed()>tiempo)
         {
             if(noHayObjectos(1)==true)
             {

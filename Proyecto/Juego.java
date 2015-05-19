@@ -35,6 +35,7 @@ public class Juego extends World
     private SimpleTimer timerice;
     private int activafire;
     private int activaice;
+    private int time;
     /**
      * METODO CONSTRUCTOR
      * este es el costructor inicial del juego y este propone las instancias iniciales del mundo
@@ -53,6 +54,7 @@ public class Juego extends World
             musica.playLoop();
             musica.setVolume(1);
             setBackground("Fondo16.jpg");
+            time=10000;
         }
         else if(escenario==USA)
         {
@@ -61,6 +63,7 @@ public class Juego extends World
             musica.playLoop();
             musica.setVolume(1);
             setBackground("Fondo15.jpg");
+            time=10000;
         }
         else if(escenario==FRANCE)
         {
@@ -69,6 +72,7 @@ public class Juego extends World
             musica.playLoop();
             musica.setVolume(1);
             setBackground("Fondo14.jpg");
+            time=8000;
         }
         else if(escenario==EGYPT)
         {
@@ -77,6 +81,7 @@ public class Juego extends World
             musica.playLoop();
             musica.setVolume(1);
             setBackground("Fondo12.jpg");
+            time=8000;
         }
         else 
         {
@@ -85,11 +90,12 @@ public class Juego extends World
             musica.playLoop();
             musica.setVolume(1);
             setBackground("Fondo13.jpg");
+            time=5000;
         }
         if(jug.getBando()==true)
         {
-            TorreLux j=new  TorreLux(true,dificultad,jug,musica);
-            TorreDark e=new TorreDark(false,dificultad,jug,musica);
+            TorreLux j=new  TorreLux(true,dificultad,jug,musica,time);
+            TorreDark e=new TorreDark(false,dificultad,jug,musica,time);
             addObject(j,34,284);
             addObject(e,766,285);
             Letrero oscuridadteam=new Letrero("Piñatas de la Oscuridad",Color.RED);
@@ -101,8 +107,8 @@ public class Juego extends World
         }
         else
         {
-            TorreLux e=new  TorreLux(false,dificultad,jug,musica);
-            TorreDark j=new TorreDark(true,dificultad,jug,musica);
+            TorreLux e=new  TorreLux(false,dificultad,jug,musica,time);
+            TorreDark j=new TorreDark(true,dificultad,jug,musica,time);
             addObject(j,34,284);
             addObject(e,766,285);
             Letrero oscuridadteam=new Letrero("Piñatas de la Oscuridad",Color.RED);
@@ -132,7 +138,9 @@ public class Juego extends World
     }
 
     /**
-    @
+     *Metodo Act:
+     *indica lo que hara en el juego el escenario
+     *principal mente el que caigan monedas para activar poderes
      */
     public void act()
     {
@@ -168,12 +176,18 @@ public class Juego extends World
             activaice--;
         }
     }
-
+    
+    /**
+     * Activa la bandera para activa el poder le las bolas de fuego
+     */
     public void activaFire()
     {
         activafire=500;
     }
     
+    /**
+     * Activa la bandera para activa el poder le las bolas de Hielo
+     */
     public void activaIce()
     {
         activaice=500;

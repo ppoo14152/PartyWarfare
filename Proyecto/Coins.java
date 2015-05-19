@@ -2,21 +2,22 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * Escribe una descrición de la clase Coins aquí.
+ *Esta clase son las monedas que permiten acceder a los poderes durante el juego
+ *la monedas cairan y el jugador las atrapara dando click sobre ellas
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irvin Gerardo Cardenaz Hernandez
+ * @version (17.05.2015)
  */
 public class Coins extends Actor
 {
+    private int onetime;//bandera que Inicializa con el valor actual del Objeto la veriable Y 
+    private int y;//Guarda el valor de Y del objecto
+    private World w;//El mundo donde se encuentra el Objecto
+    private List l1;//Una lista donde se guardara el Objecto(s) Indicador
     /**
-     * Act - hace lo que Coins quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
+     * Constructor de Coins
      */
-    private int onetime; 
-    private int y;
-    private World w;
-    private List l1;
     public Coins()
     {
         onetime=1;
@@ -24,7 +25,10 @@ public class Coins extends Actor
         w=null;
         l1=null;
     }
-
+    
+    /**
+     * el metodo que se llame e indica que se hara durante el juego
+     */
     public void act() 
     {
         if(y<405)
@@ -39,7 +43,9 @@ public class Coins extends Actor
             w.removeObject(this);
         }
     } 
-    
+    /**
+     * Indica el movimiento de caida durante el juego
+     */
     public void muevete()
     {
          if(onetime==1)

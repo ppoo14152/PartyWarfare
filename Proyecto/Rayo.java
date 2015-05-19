@@ -1,21 +1,24 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Rayo aquí.
+ * Calse rayo se ocupa cuando se invoca al Ovni y es para matar a los guerreros 
+ * durante la ejecucion del mismo.
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor Irvin Alexis Rodriguez Estrada 
+ * @autor Irving Gerardo Cardenas Hernadez 
+ * 
+ * @versión (17.15.2015)
  */
 public class Rayo extends Actor
 {
+    private int onetime; //Bandara que inicializa la posiscion de Y
+    private int y;//variable que guarda la posicision actual de Y
+    private World w;//Variable que guarda el mundo actual
+    final GreenfootImage explosion=new GreenfootImage("expfire.png");/*costante que guarda la imagen
+    de explosion*/
     /**
-     * Act - hace lo que Rayo quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
+     * Constructor de la clase rayo 
      */
-    private int onetime; 
-    private int y;
-    private World w;
-    final GreenfootImage explosion=new GreenfootImage("expfire.png");
     public Rayo()
     {
         onetime=1;
@@ -23,6 +26,9 @@ public class Rayo extends Actor
         w=null;
     }
     
+    /**
+     * Indica lo que se hara en el proceso del juego
+     */
     public void act() 
     {
         if(y<405)
@@ -36,6 +42,9 @@ public class Rayo extends Actor
         }
     } 
     
+    /**
+     * Genera el Movimiento de caida del rayo
+     */
     public void caida()
     {
          if(onetime==1)

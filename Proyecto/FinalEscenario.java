@@ -6,16 +6,10 @@ import java.awt.Color;
  * una imagen en caso de resultar ganador, y otra se se pierde.
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class FinalEscenario extends World
 {
-
-    /**
-     * Constructor para objetos de clase FinalEscenario.
-     * 
-     */
-    
     private GreenfootImage imagenfinal;
     private Letrero nombre;
     private Letrero score;
@@ -24,6 +18,16 @@ public class FinalEscenario extends World
     private GreenfootSound musica;
     private BotonHome be;
     private BotonMenu bm;
+     /**
+     * Constructor para objetos de clase FinalEscenario.
+     * 
+     * Este es el contructor que crea el ecsenario fianl donde te marca si GANASTE O PERDISTE
+     * 
+     * @param bando indica el bando si es Luz o Obscuridad del jugador
+     * @param jug lleva los datos del jugador Nombre,Puntos,etc
+     * @param m es la musica que se usa para el funcionamiento del juego
+     * 
+     */
     public FinalEscenario(boolean bando,Jugador jug,GreenfootSound m)
     {    
         // Crea un nuevo mundo de 600x400 celdas con un tamaño de celda de 1x1 pixeles.

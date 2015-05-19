@@ -198,14 +198,8 @@ public class Power extends Actor
     public void exticion()
     {
         World w=getWorld();
-        List<Guerrero> guerreros=w.getObjects(Guerrero.class);
-        if(guerreros.isEmpty()==false)
-        {
-            for(Guerrero guer:guerreros)
-            {
-                guer.muere();
-            }
-        }
+        Nuclear nuke=new Nuclear();
+        w.addObject(nuke,402,347);
     }
 
     public void fireBalls()
@@ -237,12 +231,12 @@ public class Power extends Actor
         if(band==true)
         {
             Tornado tor=new Tornado(-1);
-            w.addObject(tor,657,310);
+            w.addObject(tor,674,380);
         }
         else
         {
             Tornado tor=new Tornado(1);
-            w.addObject(tor,145,310);
+            w.addObject(tor,129,383);
         }
     }
     

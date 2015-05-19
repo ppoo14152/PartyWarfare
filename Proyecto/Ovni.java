@@ -32,7 +32,7 @@ public class Ovni extends Actor
         World w=getWorld();
         if(timerayo.millisElapsed()>6000)
         {
-           w.addObject(ray,getX(),getY()+86);
+           w.addObject(ray,getX(),getY()+61);
            timerayo.mark();
         }
         if(primeravuelta==1)

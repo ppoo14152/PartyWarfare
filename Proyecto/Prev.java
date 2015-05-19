@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Este boton  funciona dentro del menú de selección de escenario, al presionarlo
+ * Este boton  funciona dentro del menu de seleccion de escenario, al presionarlo
  * se cambia al escenario previo.
  * 
  * @author Irvin Alexis Rodriguez Estrada
@@ -10,20 +10,22 @@ import greenfoot.*;
  */
 public class Prev extends Boton
 {
+    static int USA=2;//Constante que indica que el mundo USA tiene el valor de 2
+    static int FRANCE=3;//Constante que indica que el mundo FRANCE tiene el valor de 3
+    static int EGYPT=4;//Constante que indica que el mundo EGYPT tiene el valor de 4
+    static int JAPAN=5;//Constante que indica que el mundo JAPAN tiene el valor de 5
+    static int MEXICO=1;//Constante que indica que el mundo MEXICO tiene el valor de 1
+    private int Pre;//Indica el valor actual del mundo seleccionado
+    private GreenfootSound m;//la musica actaul
+    private World w;//mundo actual
+    private Jugador jug;//los datos del jugador
+    private Enemigo ene;//los datos del enemigo
     /**
-     * Act - hace lo que Prev quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
+     * Constructor
+     * @param m1 es la musica que actual que se envia
+     * @param Juagador los datos del jugador
+     * @param Enemigo los datos del enemigo
      */
-    static int USA=2;
-    static int FRANCE=3;
-    static int EGYPT=4;
-    static int JAPAN=5;
-    static int MEXICO=1;
-    private int Pre;
-    private GreenfootSound m;
-    private World w;
-    private Jugador jug;
-    private Enemigo ene;
     public Prev(int direccion,GreenfootSound m1,Jugador j,Enemigo e)
     {
         Pre=direccion;
@@ -32,11 +34,21 @@ public class Prev extends Boton
         jug=j;
         ene=e;
     }
+    
+    /**
+     * Indica lo que se hara durante el juego
+     */
     public void act() 
     {
         mouseSobreObjecto(w);
         cambiaMundo(m,w);
     } 
+    
+    /**
+     * heredado de la clase abstracta Boton indica si el cursor est sobre el y manda una respuesta visual
+     * 
+     * @param w mundo actual
+     */
       public void mouseSobreObjecto(World w)
     {
           if(Greenfoot.mouseMoved(this))
@@ -48,6 +60,14 @@ public class Prev extends Boton
             setImage("Previus.png");
         }
     }
+    
+    /**
+     * Herado de la clase abstracta Boton si se presiono el objecto con el cursor cambia el 
+     * mundo donde se encuentra
+     * 
+     * @param m musica actual
+     * @param w mundo actual
+     */
     public void cambiaMundo(GreenfootSound m,World w)
     {
         if(Greenfoot.mouseClicked(this)||Greenfoot.isKeyDown("left"))

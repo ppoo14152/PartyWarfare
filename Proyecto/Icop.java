@@ -25,6 +25,12 @@ public class Icop extends Boton
         mouseSobreObjecto(m2);
         cambiaMundo(m,m2);
     }  
+    
+    /**
+     * heredado de la clase abstracta Boton indica si el cursor est sobre el y manda una respuesta visual
+     * 
+     * @param w mundo actual
+     */
     public void mouseSobreObjecto(World w)
     {
           if(Greenfoot.mouseMoved(this))
@@ -36,6 +42,12 @@ public class Icop extends Boton
             setImage("ICO2.png");
         }
     }
+    
+     /**
+     * heredado de la clase abstracta Boton indica si el cursor est sobre el y manda una respuesta visual
+     * 
+     * @param w mundo actual
+     */
     public void cambiaMundo(GreenfootSound m,World w)
     {
         if(Greenfoot.mouseClicked(this))
