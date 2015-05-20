@@ -8,7 +8,7 @@ import greenfoot.*;
  * @author Irving Gerardo Cardenaz Hernandez
  * @version (Mayo 2015)
  */
-public class Icoj extends Boton
+public class icoj extends Boton
 {
     private GreenfootSound music;
     private World mundo2;
@@ -17,7 +17,7 @@ public class Icoj extends Boton
      * 
      * @param m1 un archivo de sonido
      */
-    public Icoj(GreenfootSound m1)
+    public icoj(GreenfootSound m1)
     {
         music=m1;
         mundo2=getWorld();

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=m1
-comment0.target=Icoj(greenfoot.GreenfootSound)
+comment0.target=icoj(greenfoot.GreenfootSound)
 comment0.text=\r\n\ Constructor\ de\ la\ clase\r\n\ \r\n\ @param\ m1\ un\ archivo\ de\ sonido\r\n
 comment1.params=
 comment1.target=void\ act()
