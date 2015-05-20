@@ -10,7 +10,6 @@ import greenfoot.*;
  */
 public class Inicio extends World
 {
-
     /**
      * PRIMER CONSTRUCTOR
      * este es el primer constructor no tiene parametros de entrada puesto que este genera las condiciones
@@ -18,14 +17,12 @@ public class Inicio extends World
      * esta metodo se llama desde la ejecucion(LA PRIMERA EJECUCION) o cuando hay un reinicio del juego
      * 
      */
-    
     public Inicio()//Es la Clase Costructora del Mundo inicio REPRODUCE SONIDO
     {    
         super(800, 600, 1);//Tamaño de la Pantalla
-        
-        GreenfootSound music=new GreenfootSound("Pi�aton.mp3");
+        GreenfootSound music=new GreenfootSound("Pinaton.mp3");
         music.playLoop();
-        music.setVolume(1);
+        music.setVolume(100);
         
         Boton b1;//Boton Juego
         Boton b2;//Boton Puntaje
@@ -56,7 +53,6 @@ public class Inicio extends World
     public Inicio(GreenfootSound music)//Es la Clase Costructora del Mundo inicio REPRODUCE SONIDO
     {    
         super(800, 600, 1);//Tamaño de la Pantalla
-        
         Boton b1;//Boton Juego
         Boton b2;//Boton Puntaje
         Boton b3;//Boton Autores
@@ -74,5 +70,5 @@ public class Inicio extends World
 
       
     }
-    
+   
 }

@@ -34,7 +34,7 @@ public class FinalEscenario extends World
         super(800, 600, 1);
         musica=m;
         musica.stop();
-        musica=new GreenfootSound("Piñaton.mp3");
+        musica=new GreenfootSound("Pinaton.mp3");
         musica.playLoop();
         musica.setVolume(1);
         if(bando==true)

@@ -53,7 +53,7 @@ public class Juego extends World
             dificultad=1;
             musica=new GreenfootSound("MEXICO.mp3");
             musica.playLoop();
-            musica.setVolume(1);
+            musica.setVolume(100);
             setBackground("Fondo16.jpg");
             time=10000;
             timebotton=2000;
@@ -61,9 +61,9 @@ public class Juego extends World
         else if(escenario==USA)
         {
             dificultad=1;
-            musica=new GreenfootSound("USA.mp3");
+            musica=new GreenfootSound("MEXICO.mp3");
             musica.playLoop();
-            musica.setVolume(1);
+            musica.setVolume(100);
             setBackground("Fondo15.jpg");
             time=10000;
             timebotton=2000;
@@ -71,9 +71,9 @@ public class Juego extends World
         else if(escenario==FRANCE)
         {
             dificultad=2;
-            musica=new GreenfootSound("FRANCE.mp3");
+            musica=new GreenfootSound("MEXICO.mp3");
             musica.playLoop();
-            musica.setVolume(1);
+            musica.setVolume(100);
             setBackground("Fondo14.jpg");
             time=8000;
             timebotton=4000;
@@ -81,9 +81,9 @@ public class Juego extends World
         else if(escenario==EGYPT)
         {
             dificultad=2;
-            musica=new GreenfootSound("EGYPT.mp3");
+            musica=new GreenfootSound("MEXICO.mp3");
             musica.playLoop();
-            musica.setVolume(1);
+            musica.setVolume(100);
             setBackground("Fondo12.jpg");
             time=8000;
             timebotton=4000;
@@ -91,9 +91,9 @@ public class Juego extends World
         else 
         {
             dificultad=3;
-            musica=new GreenfootSound("JAPAN.mp3");
+            musica=new GreenfootSound("MEXICO.mp3");
             musica.playLoop();
-            musica.setVolume(1);
+            musica.setVolume(100);
             setBackground("Fondo13.jpg");
             time=5000;
             timebotton=8000;

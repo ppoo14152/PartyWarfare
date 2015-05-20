@@ -9,7 +9,7 @@ import greenfoot.*;
  */
 public class AutorFondo extends World
 {
-
+    private GreenfootSound music;
     /**
      * Este es el constructor del la clase solamente inicia las condiciones iniciales del
      * Escenario
@@ -20,8 +20,10 @@ public class AutorFondo extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
+        music=musica;
         Boton r;
-        r=new Return(musica);
+        r=new Return(music);
         addObject(r,700,500);
     }
+    
 }

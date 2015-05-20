@@ -46,35 +46,35 @@ public class Play extends Actor
             if(ply==MEXICO)
             {
               World w=getWorld();
-              m.pause();
+              m.stop();
               w= new Juego(1,jug,ene);
               Greenfoot.setWorld(w);
             }
             else if(ply==USA)
             {
               World w=getWorld();
-              m.pause();
+              m.stop();
               w= new Juego(2,jug,ene);
               Greenfoot.setWorld(w);
             }
              else if(ply==FRANCE)
             {
               World w=getWorld();
-              m.pause();
+              m.stop();
               w= new Juego(3,jug,ene);
               Greenfoot.setWorld(w);
             }
              else if(ply==EGYPT)
             {
               World w=getWorld();
-              m.pause();
+              m.stop();
               w= new Juego(4,jug,ene);
               Greenfoot.setWorld(w);
             }
              else 
             {
               World w=getWorld();
-              m.pause();
+              m.stop();
               w= new Juego(5,jug,ene);
               Greenfoot.setWorld(w);
             }
