@@ -7,27 +7,28 @@ import greenfoot.*;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class GuerreroDark1 extends GuerMalo
 {
-    /**
-     * Act - hace lo que GuerreroDark1 quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private GreenfootImage img1=new GreenfootImage("pin1.png");
     private GreenfootImage img2=new GreenfootImage("pin2.png");
     private GreenfootImage img3=new GreenfootImage("pin3.png");
     private GreenfootImage img4=new GreenfootImage("pin4.png");
-
-    private int vida=50;
-    private int band=0;
-    private int band2=0;
-    private int band3=0;
+    private int vida;
+    private int band;//Selecciona las Imagenes
+    private int band2;//Selecciona las Imagenes
+    private int band3;//Selecciona las Imagenes
     private int dir;
-    private int dineroguerra=0;
-    private int scoreguerra=0;
+    private int dineroguerra;
+    private int scoreguerra;
     private int cambio;
+    private int entro;
+    /**
+     * Constructor de la clase
+     * 
+     * @param unNum indica donde mirara el Guerrero
+     */
     public GuerreroDark1(int unNum)
     {
         if(unNum==1)
@@ -44,9 +45,18 @@ public class GuerreroDark1 extends GuerMalo
         }
         cambio=0;
         setImage(img1);
-
+        band=0;
+        band2=0;
+        band3=0;
+        vida=50;
+        dineroguerra=0;
+        scoreguerra=0;
+        entro=0;
     }
 
+    /**
+     * Indica que hara durante el juego
+     */
     public void act() 
     {
         if(isTouching(GuerBueno.class))
@@ -71,6 +81,7 @@ public class GuerreroDark1 extends GuerMalo
         else if(objectoEnFrente(dir)==true&&cambio==0)
         {
             setImage(img2);
+            entro=300;
         }
         else if(isTouching(Iceball.class)||isTouching(Fireball.class)||isTouching(Rayo.class))
         {
@@ -112,6 +123,11 @@ public class GuerreroDark1 extends GuerMalo
         }
     }
 
+     /**
+     * Devuelve el dinero que tenga durante el juego
+     * 
+     * @return la cantidad de dinero que tiene
+     */
     public int retribulleDinero()
     {
         int dinero=0;
@@ -120,6 +136,11 @@ public class GuerreroDark1 extends GuerMalo
         return dinero;
     }
 
+        /**
+     * Devuelve el Score que tenga durante el juego
+     * 
+     * @return la cantidad de Score que tiene
+     */
     public int retribulleScore()
     {
         int score=0;
@@ -128,6 +149,9 @@ public class GuerreroDark1 extends GuerMalo
         return score;
     }
 
+    /**
+     * Cambia la direccion del objecto por la contraria
+     */
     public void cambiaDireccion()
     {
         if(dir==1)

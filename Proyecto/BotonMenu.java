@@ -6,18 +6,21 @@ import greenfoot.*;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class BotonMenu extends Actor
 {
-    /**
-     * Act - hace lo que BotonMenu quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private GreenfootSound musica; 
     private World w;
     private Jugador jug;
     private Enemigo ene;
+    
+    /**
+     * CONSTRUCTOR DE LA CLASE
+     * 
+     * @param m musica actual
+     * @param j el objecto jugador que contiene la imformacion del mismo
+     */
     public BotonMenu(GreenfootSound m,Jugador j)
     {
         musica=m;
@@ -34,6 +37,9 @@ public class BotonMenu extends Actor
         }
     }
     
+    /**
+     * indica que se hara en la ejecion
+     */
     public void act() 
     {
         if(Greenfoot.mouseClicked(this))

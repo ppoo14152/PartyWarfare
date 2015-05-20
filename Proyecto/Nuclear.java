@@ -5,17 +5,13 @@ import java.util.*;
  * La clase nuclear es un poder, tiene la funcion de que al ser seleccionada
  * elimina a todos los personajes que estén en pantalla durante la ejecución de dicho poder.
  * 
- * @autor Irvin Alexis Rodriguez Estrada 
- * @autor Irving Gerardo Cardenas Hernadez 
+ * @author Irvin Alexis Rodriguez Estrada 
+ * @author Irving Gerardo Cardenas Hernadez 
  * 
- * @versión (17.15.2015)
+ * @version (17.15.2015)
  */
 public class Nuclear extends Actor
 {
-    /**
-     * Act - hace lo que Nuclear quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private GreenfootImage img1;
     private GreenfootImage img2;
     private GreenfootImage img3;
@@ -27,6 +23,9 @@ public class Nuclear extends Actor
     private GreenfootImage img9;
     private GreenfootImage img10;
     private int cambio;
+    /**
+     * CONSTRUCTOR DE CLASE NUCLEAR
+     */
     public Nuclear()
     {
         img1=new GreenfootImage("nuke1.png");
@@ -41,7 +40,10 @@ public class Nuclear extends Actor
         img10=new GreenfootImage("nuke10.png");
         cambio=0;
     }
-
+    
+    /**
+     * Indica que se hara durante el juego
+     */
     public void act() 
     {
         if(cambio==0)
@@ -94,14 +96,25 @@ public class Nuclear extends Actor
             setImage(img10);
             World w=getWorld();
             w.removeObject(this);
-            List<Guerrero> guerreros=w.getObjects(Guerrero.class);
-            if(guerreros.isEmpty()==false)
+            eliminaTodos(w);
+        }
+
+    }
+    
+    /**
+     * METODO: Elimina a todo los personajes del Juego
+     * 
+     * @param w es el mundo donde se enuentran los personajes
+     */
+    public void eliminaTodos(World w)
+    {
+        List<Guerrero> guerreros=w.getObjects(Guerrero.class);
+        if(guerreros.isEmpty()==false)
+        {
+            for(Guerrero guer:guerreros)
             {
-                for(Guerrero guer:guerreros)
-                {
-                    guer.muere();
-                }
+                guer.muere();
             }
         }
-    }    
+    }
 }

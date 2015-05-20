@@ -5,7 +5,7 @@ import greenfoot.*;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class BotonHome extends Actor
 {
@@ -15,12 +15,20 @@ public class BotonHome extends Actor
      */
     private GreenfootSound musica;
     private World w;
+    /**
+     * CONSTRUCTOR DE LA CLASE
+     * 
+     * @param m el archivo de musica actual
+     */
     public BotonHome(GreenfootSound m) 
     {
         musica=m;
         w=getWorld();
     }
     
+    /**
+     * Indica que se hara durante la ejecucion
+     */
     public void act()
     {
         if(Greenfoot.mouseClicked(this))
@@ -29,6 +37,9 @@ public class BotonHome extends Actor
         }
     }
     
+    /**
+     * cambia el mundo en este caso al inicio del juego
+     */
     public void cambiaMundo()
     {
          w=new Inicio(musica);

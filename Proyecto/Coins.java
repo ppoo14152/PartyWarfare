@@ -3,10 +3,10 @@ import java.util.*;
 
 /**
  *Esta clase son las monedas que permiten acceder a los poderes durante el juego
- *la monedas cairan y el jugador las atrapara dando click sobre ellas
+ *la monedas caeran y el jugador las atrapara dando click sobre ellas
  * 
- * @autor Irvin Alexis Rodriguez Estrada 
- * @autor Irvin Gerardo Cardenaz Hernandez
+ * @author Irvin Alexis Rodriguez Estrada 
+ * @author Irvin Gerardo Cardenaz Hernandez
  * @version (17.05.2015)
  */
 public class Coins extends Actor

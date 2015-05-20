@@ -32,7 +32,7 @@ public class Inicio extends World
         Boton b3;//Boton Autores
         Boton b4;//Boten Informacion
     
-        b1=new icoj(music);//Crea Boton de Jugar
+        b1=new Icoj(music);//Crea Boton de Jugar
         b2=new Icop(music);//Crea Boton de Puntaje
         b3=new Icoau(music);//Crea Boton de Autores
         b4=new Icoinf(music);//Crea Boton de Informacion
@@ -62,7 +62,7 @@ public class Inicio extends World
         Boton b3;//Boton Autores
         Boton b4;//Boten Informacion
         
-        b1=new icoj(music);//Crea Boton de Jugar
+        b1=new Icoj(music);//Crea Boton de Jugar
         b2=new Icop(music);//Crea Boton de Puntaje
         b3=new Icoau(music);//Crea Boton de Autores
         b4=new Icoinf(music);//Crea Boton de Informacion

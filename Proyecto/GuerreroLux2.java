@@ -7,27 +7,28 @@ import greenfoot.*;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class GuerreroLux2 extends GuerBueno
 {
-    /**
-     * Act - hace lo que GuerreroLux2 quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private GreenfootImage i1=new GreenfootImage("n1.png");
     private GreenfootImage i2=new GreenfootImage("n2.png");
     private GreenfootImage i3=new GreenfootImage("na1.png");
     private GreenfootImage i4=new GreenfootImage("na2.png");
     private GreenfootImage i5=new GreenfootImage("na3.png");
-    private int vida=75;
-    private int band=0;
-    private int band2=0;
-    private int band3=0;
+    private int vida;
+    private int band;//Selecciona las Imagenes
+    private int band2;//Selecciona las Imagenes
+    private int band3;//Selecciona las Imagenes
     private int dir;
-    private int dineroguerra=0;
-    private int scoreguerra=0;
+    private int dineroguerra;
+    private int scoreguerra;
     private int cambio;
+    /**
+     * Constructor de la clase
+     * 
+     * @param unNum indica donde mirara el Guerrero
+     */
     public GuerreroLux2(int unNum)
     {
         if(unNum==1)
@@ -45,9 +46,18 @@ public class GuerreroLux2 extends GuerBueno
         }
         cambio=0;
         setImage(i1);
+        band=0;
+        band2=0;
+        band3=0;
+        vida=75;
+        dineroguerra=0;
+        scoreguerra=0;
 
     }
 
+    /**
+     * Indica que hara durante el juego
+     */
     public void act() 
     {
         if(isTouching(GuerMalo.class))
@@ -91,7 +101,7 @@ public class GuerreroLux2 extends GuerBueno
                 setImage(i5);
                 band3=0;
             }
-             int activa=Greenfoot.getRandomNumber(50);
+            int activa=Greenfoot.getRandomNumber(50);
             if(activa==5)
             {
                 scoreguerra=scoreguerra+Greenfoot.getRandomNumber(90);
@@ -124,6 +134,11 @@ public class GuerreroLux2 extends GuerBueno
 
     }
 
+    /**
+     * Devuelve el dinero que tenga durante el juego
+     * 
+     * @return la cantidad de dinero que tiene
+     */
     public int retribulleDinero()
     {
         int dinero=0;
@@ -131,7 +146,12 @@ public class GuerreroLux2 extends GuerBueno
         dineroguerra=0;
         return dinero;
     }
-    
+
+    /**
+     * Devuelve el Score que tenga durante el juego
+     * 
+     * @return la cantidad de Score que tiene
+     */
     public int retribulleScore()
     {
         int score=0;
@@ -139,8 +159,11 @@ public class GuerreroLux2 extends GuerBueno
         scoreguerra=0;
         return score;
     }
-    
-        public void cambiaDireccion()
+
+    /**
+     * Cambia la direccion del objecto por la contraria
+     */
+    public void cambiaDireccion()
     {
         if(dir==1)
         {

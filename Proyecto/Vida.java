@@ -3,17 +3,16 @@ import java.awt.*;
 
 /**
  * La clase vida representa la salud de las torres, la cual al ser atacada disminuye y cambia de color
- * dependiendo del daño que haya recibido.
+ * dependiendo del daño que haya recibido e igualmente puede aumentar en ciertos casos.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versiÃ³n (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class Vida extends Actor
 {
     /**
-     * Act - hace lo que Vida quiere hacer. Este mÃ©todo se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
+     * COSNTRUCTOR DE LA CLASE VIDA
      */
     public Vida() 
     {
@@ -22,7 +21,15 @@ public class Vida extends Actor
         vida.fill();
         setImage(vida);
     }
-
+    
+    /**
+     * Reduce la vida de cierta torre, su ancho de la figura disminuye (Cambia de color dependiendo del tamaño)
+     * 
+     * @param dano valor del daño recibido
+     * @param vd la imagen actual (Rectangulo) que representa la vida
+     * 
+     * @return Devuelve un 0 si se disminuyo, un 1 si no
+     */
     public int reduceVida(int dano,GreenfootImage vd)
     {
         if(basta(dano,vd)==false)
@@ -53,6 +60,14 @@ public class Vida extends Actor
         }
     }
     
+    /**
+     * Aumenta la vida(ancho) del rectangulo i
+     * 
+     * @param inc el valor de lo que aumentara
+     * @param vid la imagen actual(Rectangulo) que representa la vida
+     * 
+     * @return Devuelve un 0 si se aumento, un 1 si no
+     */
     public int incrementaVida(int inc,GreenfootImage vd)
     {
         if(tope(inc,vd)==false)
@@ -82,7 +97,15 @@ public class Vida extends Actor
         }
         
     }
-
+    
+    /**
+     * Indica si el daño es mayor al ancho de la imagen
+     * 
+     * @param dano valor del daño recibido
+     * @param vd la imagen actual (Rectangulo) que representa la vida
+     * 
+     * @return Devuelve un true en caso que si sea mayor y un false en caso contrario
+     */
     public boolean basta(int dano,GreenfootImage vd)
     {
         if(vd.getWidth()<=dano)
@@ -91,6 +114,14 @@ public class Vida extends Actor
             return false;
     }
     
+    /**
+     * Indica si ya no se puede aumentar mas a la vida puesto que llego a sui maximo
+     * 
+     * @param inc valor del incremento recibido
+     * @param vd la imagen actual (Rectangulo) que representa la vida
+     * 
+     * @return Devuelve un true si esta en el tope y un false en su caso contrario
+     */
     public boolean tope(int inc,GreenfootImage vd)
     {
         if(vd.getWidth()+inc>262)

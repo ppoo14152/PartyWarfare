@@ -12,10 +12,6 @@ import greenfoot.*;
  */
 public abstract class Symbol extends Actor
 {
-    public Symbol()
-    {
-        //*ESTA CLASE NO CONTIENE CODIGO PERO NO ES ABSTRACTA DEBIDO A QUE ES UN CONSTRUCTOR Y SE IMPLEMENTA*/
-    }
     
     /**
      * Este metodo abstracto solo indica que si el mause esta sobre el simbolo

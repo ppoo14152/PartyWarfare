@@ -5,23 +5,25 @@ import java.util.*;
  * La clase poder es un boton que necesita del indicador para poder utilizarse, si el indicador se llena de estrellas
  * este boton estara disponible para poder usarse.
  * 
- * @autor Irvin Alexis Rodriguez Estrada 
- * @autor Irving Gerardo Cardenas Hernadez 
+ * @author Irvin Alexis Rodriguez Estrada 
+ * @author Irving Gerardo Cardenas Hernadez 
  * 
- * @versión (17.15.2015)
+ * @version (17.15.2015)
  */
 public class Power extends Actor
 {
-    /**
-     * Act - hace lo que Power quiere hacer. Este mÃ©todo se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private GreenfootImage low;
     private GreenfootImage high;
     private int interruptor;
     private boolean jugador;
     private boolean enemigo;
     private Cartel poder;
+    /**
+     * Constructor de la clase
+     * 
+     * @param jug el valor que ocupa jugador
+     * @param ene el valor que ocupa enemigo
+     */
     public Power(boolean jug,boolean ene)
     {
         low=new GreenfootImage("powerlow.png");
@@ -31,6 +33,9 @@ public class Power extends Actor
         enemigo=ene;
     }
 
+    /**
+     * Indica lo que hara en el juego
+     */
     public void act() 
     {
 
@@ -44,18 +49,29 @@ public class Power extends Actor
         }
     }    
 
+    /**
+     * Activa el boton del poder
+     */
     public void activaPower()
     {
         setImage(high);
         interruptor=1;
     }
-
+    
+    /**
+     * Desactiva el boton del poder
+     */
     public void desactivaPower()
     {
         setImage(low);
         interruptor=0;
     }
 
+    /**
+     * Activa un poder cualquiera del repertorio
+     * 
+     * @param band el valor del bando
+     */
     public void activaPoder(boolean band)
     {
         int p;
@@ -112,6 +128,11 @@ public class Power extends Actor
 
     }
 
+    /**
+     * escoje un poder del repertorio
+     * 
+     * @return el valor del poder elegido
+     */
     public int eligePoder()
     {
         int ind=0; 
@@ -132,6 +153,11 @@ public class Power extends Actor
         return ind;
     }
 
+    /**
+     * activa el poder del cambio de direccion de los guerreros
+     * 
+     * @param band el valor del bando
+     */
     public void atraso(boolean band)
     {
         World w=getWorld();
@@ -153,6 +179,11 @@ public class Power extends Actor
         } 
     }
 
+    /**
+     * aumenta la salud del que invoco el poder
+     * 
+     * @param band el valor del bando
+     */
     public void aumentaSalud(boolean band)
     {
         World w=getWorld();
@@ -168,6 +199,11 @@ public class Power extends Actor
         }
     }
 
+    /**
+     * aumenta el dinero del que invoco el poder
+     * 
+     * @param band el valor del bando
+     */
     public void aumentaDinero(boolean band)
     {
         World w=getWorld();
@@ -183,6 +219,11 @@ public class Power extends Actor
         }
     }
 
+    /**
+     * daña al enemigo dependiendo de quien haya invocado el poder
+     * 
+     * @param band el valor del bando
+     */
     public void danoEnemigo(boolean band)
     {
         World w=getWorld();
@@ -198,6 +239,9 @@ public class Power extends Actor
         }
     }
 
+    /**
+     * Elimina a todos los personajes del mundo
+     */
     public void exticion()
     {
         World w=getWorld();
@@ -205,6 +249,9 @@ public class Power extends Actor
         w.addObject(nuke,402,347);
     }
 
+    /**
+     * invoca la caida de bolas de fuego
+     */
     public void fireBalls()
     {
         int i;
@@ -213,6 +260,9 @@ public class Power extends Actor
         ((Juego)w).activaFire();
     }
     
+    /**
+     * invoca la caida de bolas de hielo
+     */
     public void iceBalls()
     {
         int i;
@@ -221,6 +271,9 @@ public class Power extends Actor
         ((Juego)w).activaIce();
     }
     
+    /**
+     * invoca al ovni
+     */
     public void invocaOvni()
     {
         World w=getWorld();
@@ -228,6 +281,11 @@ public class Power extends Actor
         w.addObject(ov,145,159);
     }
     
+    /**
+     * invoca al tornado
+     * 
+     * @param band el valor del bando
+     */
     public void invocaTornado(boolean band)
     {
         World w=getWorld();

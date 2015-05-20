@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
+comment0.text=\r\n\ metodo\ que\ indica\ lo\ que\ hara\ durante\ el\ juego\r\n
 comment1.params=index
 comment1.target=void\ cambiaImagen(int)
+comment1.text=\r\n\ Cambia\ la\ imagen\ del\ objecto\ por\ las\ imagenes\ ya\ definidas\ segun\ el\ indice\ que\ se\ le\ envie\r\n\ \r\n\ @param\ indez\ indica\ que\ imagen\ poner\ \r\n
 numComments=2

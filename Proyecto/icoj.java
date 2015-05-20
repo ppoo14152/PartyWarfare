@@ -1,30 +1,35 @@
 import greenfoot.*;
 
 /**
- * Este boton inicializa el juego, nos llevará a la pantalla de selección de equipo y después
- * a la pantalla de selección de escenario.
+ * Este boton inicializa el juego, nos llevara a la pantalla de seleccion de equipo y despues
+ * a la pantalla de seleccion de escenario.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
-public class icoj extends Boton
+public class Icoj extends Boton
 {
+    private GreenfootSound music;
+    private World mundo2;
     /**
-     * Act - do whatever the icoj wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Constructor de la clase
+     * 
+     * @param m1 un archivo de sonido
      */
-    private GreenfootSound m;
-    private World m2;
-    public icoj(GreenfootSound m1)
+    public Icoj(GreenfootSound m1)
     {
-        m=m1;
-        m2=getWorld();
+        music=m1;
+        mundo2=getWorld();
     }
+    
+    /**
+     * Metodo act heredado de actor
+     */
     public void act() 
     {
-        mouseSobreObjecto(m2);
-        cambiaMundo(m,m2);
+        mouseSobreObjecto(mundo2);
+        cambiaMundo(music,mundo2);
     }  
     
     /**

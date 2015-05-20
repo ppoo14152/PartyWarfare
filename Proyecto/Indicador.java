@@ -5,17 +5,13 @@ import java.util.*;
  * La clase indicador representa al contenedor de las estrellas que es necesario acumular para
  * utilizar uno de los diversos poderes que se tienen.
  * 
- * @autor Irvin Alexis Rodriguez Estrada 
- * @autor Irving Gerardo Cardenas Hernadez 
+ * @author Irvin Alexis Rodriguez Estrada 
+ * @author Irving Gerardo Cardenas Hernadez 
  * 
- * @versión (17.15.2015)
+ * @version (17.15.2015)
  */
 public class Indicador extends Actor
 {
-    /**
-     * Act - hace lo que Indicador quiere hacer. Este mÃ©todo se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private GreenfootImage vacio; 
     private GreenfootImage uno;
     private GreenfootImage dos;
@@ -23,6 +19,9 @@ public class Indicador extends Actor
     private GreenfootImage cuatro;
     private GreenfootImage full;
     private int cantidad;
+    /**
+     * Constructor de la clase
+     */
     public Indicador() 
     {
         vacio=new GreenfootImage("coinsclear.png");
@@ -34,6 +33,9 @@ public class Indicador extends Actor
         cantidad=0;
     }
     
+    /**
+     * Indica lo que se hara durante el juego
+     */
     public void act()
     {
         if(cantidad>=5)
@@ -44,6 +46,9 @@ public class Indicador extends Actor
         }
     }
     
+    /**
+     * Aumenta la cantidad en una unidad
+     */
     public void aumenta()
     {
         cantidad++;
@@ -69,6 +74,9 @@ public class Indicador extends Actor
         }
     }
     
+    /**
+     * Borra la cantidad (Asigna a cero) y pone a la imagen en un estado original
+     */
     public void clear()
     {
         cantidad=0;

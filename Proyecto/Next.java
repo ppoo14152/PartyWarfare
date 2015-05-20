@@ -6,20 +6,29 @@ import greenfoot.*;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class Next extends Boton
 {
-    static int USA=1;
-    static int FRANCE=2;
-    static int EGYPT=3;
-    static int JAPAN=4;
-    static int MEXICO=5;
-    private int Next;
-    private GreenfootSound m;
-    private World w;
-    private Jugador jug;
-    private Enemigo ene;
+    static int USA=1;//Constante que indica que el mundo USA tiene el valor de 1
+    static int FRANCE=2;//Constante que indica que el mundo FRANCE tiene el valor de 2
+    static int EGYPT=3;//Constante que indica que el mundo EGYPT tiene el valor de 3
+    static int JAPAN=4;//Constante que indica que el mundo JAPAN tiene el valor de 4
+    static int MEXICO=5;//Constante que indica que el mundo MEXICO tiene el valor de 5
+    private int Next;//Indica el valor actual del mundo seleccionado
+    private GreenfootSound m;//la musica actaul
+    private World w;//mundo actual
+    private Jugador jug;//los datos del jugador
+    private Enemigo ene;//los datos del enemigo
+   
+    /**
+     * Constructor de la clase
+     * 
+     * @param direccion bandera que indica la direccion
+     * @param m1 es la musica que actual que se envia
+     * @param Juagador los datos del jugador
+     * @param Enemigo los datos del enemigo
+     */
     public Next(int direccion,GreenfootSound m1,Jugador j,Enemigo e)
     {
         Next=direccion;
@@ -28,6 +37,10 @@ public class Next extends Boton
         jug=j;
         ene=e;
     }
+    
+    /**
+     * Indica lo que se hara durante el juego
+     */
     public void act() 
     {
       mouseSobreObjecto(w);

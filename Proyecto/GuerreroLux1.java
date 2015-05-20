@@ -17,14 +17,19 @@ public class GuerreroLux1 extends GuerBueno
     private GreenfootImage i1=new GreenfootImage("b1.png");
     private GreenfootImage i2=new GreenfootImage("b2.png");
     private GreenfootImage i3=new GreenfootImage("b3.png");
-    private int vida=50;
-    private int band=0;
-    private int band2=0;
-    private int band3=0;
+    private int vida;
+    private int band;//Selecciona las Imagenes
+    private int band2;//Selecciona las Imagenes
+    private int band3;//Selecciona las Imagenes
     private int dir;
-    private int dineroguerra=0;
-    private int scoreguerra=0;
+    private int dineroguerra;
+    private int scoreguerra;
     private int cambio;
+     /**
+     * Constructor de la clase
+     * 
+     * @param unNum indica donde mirara el Guerrero
+     */
     public GuerreroLux1(int unNum)
     {
         if(unNum==1)
@@ -40,9 +45,17 @@ public class GuerreroLux1 extends GuerBueno
         }
         cambio=0;
         setImage(i1);
-
+        band=0;
+        band2=0;
+        band3=0;
+        vida=50;
+        dineroguerra=0;
+        scoreguerra=0;
     }
 
+    /**
+     * Indica que hara durante el juego
+     */
     public void act() 
     {
         if(isTouching(GuerMalo.class))
@@ -108,6 +121,11 @@ public class GuerreroLux1 extends GuerBueno
         }
     }
 
+    /**
+     * Devuelve el dinero que tenga durante el juego
+     * 
+     * @return la cantidad de dinero que tiene
+     */
     public int retribulleDinero()
     {
         int dinero=0;
@@ -115,7 +133,12 @@ public class GuerreroLux1 extends GuerBueno
         dineroguerra=0;
         return dinero;
     }
-    
+
+    /**
+     * Devuelve el Score que tenga durante el juego
+     * 
+     * @return la cantidad de Score que tiene
+     */
     public int retribulleScore()
     {
         int score=0;
@@ -123,7 +146,10 @@ public class GuerreroLux1 extends GuerBueno
         scoreguerra=0;
         return score;
     }
-    
+
+    /**
+     * Cambia la direccion del objecto por la contraria
+     */
     public void cambiaDireccion()
     {
         if(dir==1)

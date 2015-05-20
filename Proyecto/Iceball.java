@@ -4,21 +4,20 @@ import greenfoot.*;
  * La clase iceball o bola de nieve, al igual que la clase fireball es un poder, 
  * al ser seleccionada aparece bolas de nieve que caen y eliminan a los personajes que toque.
  * 
- * @autor Irvin Alexis Rodriguez Estrada 
- * @autor Irving Gerardo Cardenas Hernadez 
+ * @author Irvin Alexis Rodriguez Estrada 
+ * @author Irving Gerardo Cardenas Hernadez 
  * 
- * @versión (17.15.2015)
+ * @version (17.15.2015)
  */
 public class Iceball extends Actor
 {
-    /**
-     * Act - hace lo que Iceball quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
-    private int onetime; 
-    private int y;
-    private World w;
+    private int onetime; //bandera que indica la inicializacion REAL de Y
+    private int y;//Cordenada de caida
+    private World w;//mundo actual
     final GreenfootImage explosion=new GreenfootImage("expice.png");
+    /**
+     * Constructor de la clase
+     */
     public Iceball()
     {
         onetime=1;
@@ -26,6 +25,9 @@ public class Iceball extends Actor
         w=null;
     }
     
+    /**
+     * Metodo act 
+     */
     public void act() 
     {
         if(y<405)
@@ -39,6 +41,9 @@ public class Iceball extends Actor
         }
     } 
     
+    /**
+     * Metodo que simula la caida del Objecto
+     */
     public void caida()
     {
          if(onetime==1)

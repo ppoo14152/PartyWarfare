@@ -17,10 +17,9 @@ public class TorreLux extends Torre
      */
     private int rango;
     private boolean bd;
-    private int n=0;
     private int activaRango;
     private int d;
-    private int NuevaVida=1;
+    private int NuevaVida;
     private Vida vid;
     private int finish;
     private int dinero;
@@ -35,6 +34,15 @@ public class TorreLux extends Torre
     private int tiempo;
     private SimpleTimer time;
     private SimpleTimer timenemigo;
+    /**
+     * Constructor de la clase
+     * 
+     * @param band el bando que pertenece
+     * @param dif indica cual sera el parsonaje que aparecera
+     * @param jug recibe el jugador
+     * @param m la musica actual
+     * @param times el tiempo de espera que salgan los enemigos
+     */
     public TorreLux(boolean band,int dif,Jugador jug,GreenfootSound m,int times)
     {
         if(band==true)
@@ -48,15 +56,18 @@ public class TorreLux extends Torre
         jugador=jug;
         score=0;
         bd=band;
-        activaRango=1;
         d=dif;
         records=new Records();
         musica=m;
         time=new SimpleTimer();
         timenemigo=new SimpleTimer();
         tiempo=times;
+        NuevaVida=1;
     }
 
+    /**
+     * Indica lo que se hara en el juego
+     */
     public void act() 
     {
         if(bd==true&&valorinicial==0)
@@ -72,22 +83,13 @@ public class TorreLux extends Torre
             NuevaVida=0;
         }
 
-        if(activaRango==1)
-        {
-            rango=Greenfoot.getRandomNumber(351)+50;
-            activaRango=0;
-        }
-
         if(bd==true)
         {
             actuaJugador();
         }
         else
         {
-            n=actuaEnemigo(n);
-            if(n==0)
-                activaRango=1;
-            n++;
+            actuaEnemigo();
             if(time.millisElapsed()>60000)
             {
                 World w=getWorld();
@@ -104,9 +106,12 @@ public class TorreLux extends Torre
                 danoTorre(10);
             }
         }
-        
+
     } 
 
+    /**
+     * indica las acciones que hara el jugador en caso de se elegido
+     */
     public void actuaJugador()
     {
         World w=getWorld();
@@ -134,7 +139,7 @@ public class TorreLux extends Torre
             dinero=dinero-1000;
             countdinero.modificaLetrero(""+dinero,Color.white);
         }
-       
+
         w=getWorld();
         guerreros=w.getObjects(GuerBueno.class);
         for(GuerBueno guer:guerreros)
@@ -146,7 +151,10 @@ public class TorreLux extends Torre
         }
     }
 
-    public int actuaEnemigo(int n)
+    /**
+     * Indica las acciones del enemigo 
+     */
+    public void actuaEnemigo()
     {
         World w=getWorld();
         if(timenemigo.millisElapsed()>tiempo)
@@ -209,36 +217,53 @@ public class TorreLux extends Torre
                     }
                 }
             }
-            n=0;
+
             timenemigo.mark();
         } 
-        return n;
+
     }
 
+    /**
+     * Inicializa el valor del dinero
+     */
     public void escribeValorDeDineroInicial()
     {
         World w=getWorld();
         countdinero=new Letrero(""+dinero,Color.WHITE);
         w.addObject(countdinero,504,508);
     }
-    
-      public void escribeScoreInicial()
+
+    /**
+     * Inicializa el valor del Score
+     */
+    public void escribeScoreInicial()
     {
-       World w=getWorld();
-       countscore=new Letrero(""+score,Color.WHITE);
-       w.addObject(countscore,672,506); 
+        World w=getWorld();
+        countscore=new Letrero(""+score,Color.WHITE);
+        w.addObject(countscore,672,506); 
     }
-    
+
+    /**
+     * Devuelve el score
+     * 
+     * @return el valor del score
+     */
     public int getScore()
     {
         return score;
     }
-    
-      public void masSalud()
+
+    /**
+     * Incremanta la salud de la torre
+     */
+    public void masSalud()
     {
         rebilitado(30,bd,vid);
     }
-    
+
+    /**
+     * aumenta el valor del dinero
+     */
     public void aumentaDinero()
     {
         if(bd==true)
@@ -247,7 +272,10 @@ public class TorreLux extends Torre
             countdinero.modificaLetrero(""+dinero,Color.white);
         }
     }
-    
+
+    /**
+     * disminuye la salud de la torre
+     */
     public void danoTorre(int dano)
     {
         finish=afectado(dano,bd,vid);

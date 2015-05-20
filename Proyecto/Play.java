@@ -10,19 +10,24 @@ import greenfoot.*;
  */
 public class Play extends Actor
 {
-    /**
-     * Act - hace lo que Play quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     static int MEXICO=1;
     static int USA=2;
     static int FRANCE=3;
     static int EGYPT=4;
     static int JAPAN=5;
-    private GreenfootSound m;
-    private int ply;
+    private GreenfootSound m;//musica inicial del juego
+    private int ply;//Indica a que mundo ira
     private Jugador jug;
     private Enemigo ene;
+    
+    /**
+     * CONSTRUCTOR DE LA CLASE
+     * 
+     * @param m1 archivo actual de musica
+     * @param num indica a que mundo ira
+     * @param j indica el Objecto jugador
+     * @param e indica el Objecto enemigo
+     */
     public Play(GreenfootSound m1,int num,Jugador j,Enemigo e)
     {
        m=m1; 
@@ -30,6 +35,10 @@ public class Play extends Actor
        jug=j;
        ene=e;
     }
+    
+    /**
+     * Indica lo que se hara durante el juego
+     */
     public void act() 
     {
          if(Greenfoot.mouseClicked(this))

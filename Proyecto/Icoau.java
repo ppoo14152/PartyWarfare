@@ -5,25 +5,30 @@ import greenfoot.*;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class Icoau extends Boton
 {
+    private GreenfootSound music;
+    private World mundo2;
     /**
-     * Act - do whatever the Icoau wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * CONSTRUCTOR DE LA CLASE
+     * 
+     * @param m1 musica actual del juego
      */
-    private GreenfootSound m;
-    private World m2;
     public Icoau(GreenfootSound m1)
     {
-        m=m1;
-        m2=getWorld();
+        music=m1;
+        mundo2=getWorld();
     }
+    
+    /**
+     * metodo act heredado de Actor
+     */
     public void act() 
     {
-        mouseSobreObjecto(m2);
-        cambiaMundo(m,m2);
+        mouseSobreObjecto(mundo2);
+        cambiaMundo(music,mundo2);
     } 
     
     /**

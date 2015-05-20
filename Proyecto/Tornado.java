@@ -4,25 +4,27 @@ import greenfoot.*;
  * La clase tornado es un poder, que al ser seleccionado aparece un tornado, el cual inicia del lado 
  * del equipo que lo haya invocado, y  el cual destruye a los personajes que toque.
  * 
- * @autor Irvin Alexis Rodriguez Estrada 
- * @autor Irving Gerardo Cardenas Hernadez 
+ * @author Irvin Alexis Rodriguez Estrada 
+ * @author Irving Gerardo Cardenas Hernadez 
  * 
- * @versión (17.15.2015)
+ * @version (17.15.2015)
  */
 public class Tornado extends Actor
 {
-    /**
-     * Act - hace lo que Tornado quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private GreenfootImage img1;
     private GreenfootImage img2;
     private GreenfootImage img3;
     private GreenfootImage img4;
     private GreenfootImage img5;
     private GreenfootImage img6;
-    private int select;
-    private int direcion;
+    private int select;//Seleciona imagenes
+    private int direcion;//indica la direccion de su movimiento
+    /**
+     * Constructor de la clase
+     * 
+     * @param dir direccion del moviento 1 para derecha , -1 para izquierda
+     * 
+     */
     public Tornado(int dir)
     {
         img1=new GreenfootImage("tornadu.png");
@@ -34,7 +36,10 @@ public class Tornado extends Actor
         select=0;
         direcion=dir;
     }
-
+    
+    /**
+     * Indica lo que se hara durante el juego
+     */
     public void act() 
     {
         move(direcion);

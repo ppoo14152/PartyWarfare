@@ -1,30 +1,33 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Return here.
+ * Esta Clase RETURN sirve para regresar al inicio del Juego
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class Return extends Boton
 {
+    private GreenfootSound music;
+    private World mundo2;
     /**
-     * Act - do whatever the Return wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * COSTRUCTOR DE LA CLASE
+     * 
+     * @param m1 un sonido o musica actual del juego
      */
-    private GreenfootSound m;
-    private World m2;
-    
     public Return(GreenfootSound m1)
     {
-        m=m1;
-        m2=getWorld();
+        music=m1;
+        mundo2=getWorld();
     }
+    /**
+     * Metodo act heredado de la clase actor
+     */
     public void act() 
     {
-      mouseSobreObjecto(m2);
-      cambiaMundo(m,m2);
+      mouseSobreObjecto(mundo2);
+      cambiaMundo(music,mundo2);
     }
     
     /**

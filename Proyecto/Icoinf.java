@@ -1,29 +1,34 @@
 import greenfoot.*;
 
 /**
- * Boton que al presionarse nos mostrará la pantalla de ayuda.
+ * Boton que al presionarse nos mostrara la pantalla de ayuda.
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class Icoinf extends Boton
 {
+    private GreenfootSound music;
+    private World mundo2;
     /**
-     * Act - do whatever the Icoinf wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Constructor de la clase
+     * 
+     * @param m1 un Archivo de sonido
      */
-    private GreenfootSound m;
-    private World m2;
     public Icoinf(GreenfootSound m1)
     {
-        m=m1;
-        m2=getWorld();
+        music=m1;
+        mundo2=getWorld();
     }
+    
+    /**
+     * metodo act heredado de actor
+     */
     public void act() 
     {
-       mouseSobreObjecto(m2);
-       cambiaMundo(m,m2);
+       mouseSobreObjecto(mundo2);
+       cambiaMundo(music,mundo2);
     } 
     
      /**

@@ -6,7 +6,7 @@ import greenfoot.*;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class Prev extends Boton
 {
@@ -22,6 +22,8 @@ public class Prev extends Boton
     private Enemigo ene;//los datos del enemigo
     /**
      * Constructor
+     * 
+     * @param direccion bandera que indica la direccion
      * @param m1 es la musica que actual que se envia
      * @param Juagador los datos del jugador
      * @param Enemigo los datos del enemigo

@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=direccion\ m1\ j\ e
 comment0.target=Prev(int,\ greenfoot.GreenfootSound,\ Jugador,\ Enemigo)
-comment0.text=\r\n\ Constructor\r\n\ @param\ m1\ es\ la\ musica\ que\ actual\ que\ se\ envia\r\n\ @param\ Juagador\ los\ datos\ del\ jugador\r\n\ @param\ Enemigo\ los\ datos\ del\ enemigo\r\n
+comment0.text=\r\n\ Constructor\r\n\ \r\n\ @param\ direccion\ bandera\ que\ indica\ la\ direccion\r\n\ @param\ m1\ es\ la\ musica\ que\ actual\ que\ se\ envia\r\n\ @param\ Juagador\ los\ datos\ del\ jugador\r\n\ @param\ Enemigo\ los\ datos\ del\ enemigo\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Indica\ lo\ que\ se\ hara\ durante\ el\ juego\r\n

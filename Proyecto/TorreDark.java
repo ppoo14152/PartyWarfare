@@ -8,26 +8,20 @@ import java.awt.Color;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versión (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class TorreDark extends Torre
 {
-    /**
-     * Act - hace lo que Enemigo quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private int rango;
     private boolean bd;
-    private int n=0;
-    private int activaRango;
     private int d;
-    private int NuevaVida=1;
+    private int NuevaVida;
     private Vida vid;
     private int finish;
     private int dinero;
     private Letrero countdinero;
     private Letrero countscore;
-    private int valorinicial=0;
+    private int valorinicial;
     private List<GuerMalo>guerreros;
     private int score;
     private Jugador jugador;
@@ -36,6 +30,15 @@ public class TorreDark extends Torre
     private int tiempo;
     private SimpleTimer time;
     private SimpleTimer timenemigo;
+    /**
+     * Constructor de la clase
+     * 
+     * @param band el bando que pertenece
+     * @param dif indica cual sera el parsonaje que aparecera
+     * @param jug recibe el jugador
+     * @param m la musica actual
+     * @param times el tiempo de espera que salgan los enemigos
+     */
     public TorreDark(boolean band,int dif,Jugador jug, GreenfootSound m,int times)
     {
         if(band==true)
@@ -49,15 +52,19 @@ public class TorreDark extends Torre
         jugador=jug;
         score=0;
         bd=band;
-        activaRango=1;
         records=new Records();
         d=dif;
         musica=m;
         time=new SimpleTimer();
         timenemigo=new SimpleTimer();
         tiempo=times;
+        valorinicial=0;
+        NuevaVida=1;
     }
 
+    /**
+     * Indica lo que se hara en el juego
+     */
     public void act() 
     {
         if(bd==true&&valorinicial==0)
@@ -73,22 +80,13 @@ public class TorreDark extends Torre
             NuevaVida=0;
         } 
 
-        if(activaRango==1)
-        {
-            rango=Greenfoot.getRandomNumber(351)+50;
-            activaRango=0;
-        }
-
         if(bd==true)
         {
             actuaJugador();
         }
         else
         {
-            n=actuaEnemigo(n);
-            if(n==0)
-                activaRango=1;
-            n++;
+            actuaEnemigo();
             if(time.millisElapsed()>60000)
             {
                 World w=getWorld();
@@ -109,6 +107,9 @@ public class TorreDark extends Torre
 
     } 
 
+    /**
+     * indica las acciones que hara el jugador en caso de se elegido
+     */
     public void actuaJugador()
     {
         World w=getWorld();
@@ -148,7 +149,10 @@ public class TorreDark extends Torre
         }
     }
 
-    public int actuaEnemigo(int n)
+    /**
+     * Indica las acciones del enemigo 
+     */
+    public void actuaEnemigo()
     {
         World w=getWorld();
         if(timenemigo.millisElapsed()>tiempo)
@@ -210,19 +214,24 @@ public class TorreDark extends Torre
                     }
                 }
             }
-            n=0;
             timenemigo.mark();
         } 
-        return n;
     }
-
+    
+    
+    /**
+     * Inicializa el valor del dinero
+     */
     public void escribeValorDeDineroInicial()
     {
         World w=getWorld();
         countdinero=new Letrero(""+dinero,Color.WHITE);
         w.addObject(countdinero,504,508);
     }
-
+    
+    /**
+     * Inicializa el valor del Score
+     */
     public void escribeScoreInicial()
     {
         World w=getWorld();
@@ -230,16 +239,27 @@ public class TorreDark extends Torre
         w.addObject(countscore,672,506); 
     }
 
+    /**
+     * Devuelve el score
+     * 
+     * @return el valor del score
+     */
     public int getScore()
     {
         return score;
     }
 
+    /**
+     * Incremanta la salud de la torre
+     */
     public void masSalud()
     {
         rebilitado(30,bd,vid);
     }
 
+    /**
+     * aumenta el valor del dinero
+     */
     public void aumentaDinero()
     {
         if(bd==true)
@@ -249,6 +269,9 @@ public class TorreDark extends Torre
         }
     }
 
+    /**
+     * disminuye la salud de la torre
+     */
     public void danoTorre(int dano)
     {
         finish=afectado(dano,bd,vid);

@@ -9,34 +9,49 @@ import java.util.*;
  * @versión (Mayo 2015)
  */
 public abstract class GuerMalo extends Guerrero
-{
-    /**
-     * Act - hace lo que GuerMalo quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
+{   /**
+     * Indica si un Guerrero este enfrente de otro 
+     * 
+     * @param dir direccion donde mira el Objecto
+     * 
+     * @return devuelve false si no hay guerrero , true si lo hay
      */
-     public boolean objectoEnFrente(int dir)
+    public boolean objectoEnFrente(int dir)
     {
         if(dir>0)
         {
-          List l1=this.getObjectsAtOffset(40,0,GuerMalo.class);
-          if(l1.isEmpty()==false)
-             return true;
+            List l1=this.getObjectsAtOffset(40,0,GuerMalo.class);
+            if(l1.isEmpty()==false)
+                return true;
             else
-             return false;
+                return false;
         }
         else
         {
-          List l1=this.getObjectsAtOffset(-40,0,GuerMalo.class);
-          if(l1.isEmpty()==false)
-             return true;
+            List l1=this.getObjectsAtOffset(-40,0,GuerMalo.class);
+            if(l1.isEmpty()==false)
+                return true;
             else
-             return false;  
+                return false;  
         }
     }
     
+    /**
+     * Devuelve el dinero que tenga durante el juego
+     * 
+     * @return la cantidad de dinero que tiene
+     */
     abstract public int retribulleDinero();
-    
+
+    /**
+     * Devuelve el Score que tenga durante el juego
+     * 
+     * @return la cantidad de Score que tiene
+     */
     abstract public int retribulleScore();
-    
+
+    /**
+     * Cambia la direccion del objecto por la contraria
+     */
     abstract public void cambiaDireccion();
 }

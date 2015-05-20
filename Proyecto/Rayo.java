@@ -4,10 +4,10 @@ import greenfoot.*;
  * Clase rayo se ocupa cuando se invoca al Ovni y es para matar a los guerreros 
  * durante la ejecucion del mismo.
  * 
- * @autor Irvin Alexis Rodriguez Estrada 
- * @autor Irving Gerardo Cardenas Hernadez 
+ * @author Irvin Alexis Rodriguez Estrada 
+ * @author Irving Gerardo Cardenas Hernadez 
  * 
- * @versión (17.15.2015)
+ * @version (17.15.2015)
  */
 public class Rayo extends Actor
 {

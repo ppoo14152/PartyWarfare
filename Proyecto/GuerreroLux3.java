@@ -17,14 +17,19 @@ public class GuerreroLux3 extends GuerBueno
     private GreenfootImage i1=new GreenfootImage("v1.png");
     private GreenfootImage i2=new GreenfootImage("v2.png");
     private GreenfootImage i3=new GreenfootImage("v3.png");
-    private int vida=100;
-    private int band=0;
-    private int band2=0;
-    private int band3=0;
+    private int vida;
+    private int band;//Seleciona las Imagenes
+    private int band2;//Sleciona las Imagenes
+    private int band3;//Sleciona las Imagenes
     private int dir;
-    private int dineroguerra=0;
-    private int scoreguerra=0;
+    private int dineroguerra;
+    private int scoreguerra;
     private int cambio;
+    /**
+     * Constructor de la clase
+     * 
+     * @param unNum indica donde mirara el Guerrero
+     */
     public GuerreroLux3(int unNum)
     {
         if(unNum==1)
@@ -40,9 +45,17 @@ public class GuerreroLux3 extends GuerBueno
         }
         cambio=0;
         setImage(i1);
-
+        band=0;
+        band2=0;
+        band3=0;
+        vida=100;
+        dineroguerra=0;
+        scoreguerra=0;
     }
 
+    /**
+     * Indica que hara durante el juego
+     */
     public void act() 
     {
         if(isTouching(GuerMalo.class))
@@ -108,6 +121,11 @@ public class GuerreroLux3 extends GuerBueno
         }
     } 
 
+    /**
+     * Devuelve el dinero que tenga durante el juego
+     * 
+     * @return la cantidad de dinero que tiene
+     */
     public int retribulleDinero()
     {
         int dinero=0;
@@ -116,6 +134,11 @@ public class GuerreroLux3 extends GuerBueno
         return dinero;
     }
 
+    /**
+     * Devuelve el Score que tenga durante el juego
+     * 
+     * @return la cantidad de Score que tiene
+     */
     public int retribulleScore()
     {
         int score=0;
@@ -124,6 +147,9 @@ public class GuerreroLux3 extends GuerBueno
         return score;
     }
 
+    /**
+     * Cambia la direccion del objecto por la contraria
+     */
     public void cambiaDireccion()
     {
         if(dir==1)

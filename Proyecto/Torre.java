@@ -6,15 +6,18 @@ import java.util.*;
  * 
  * @author Irvin Alexis Rodriguez Estrada
  * @author Irving Gerardo Cardenaz Hernandez
- * @versiÃ³n (Mayo 2015)
+ * @version (Mayo 2015)
  */
 public class Torre extends Actor
 {
-    /**
-     * Act - hace lo que Torres quiere hacer. Este mÃ©todo se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private Vida vd;
+    
+    /**
+     * Indica si alrededor de la torre hay Guerreros
+     *  @param num indica que objecto busca
+     *  @return true si hay objectos
+     *  @return false si no
+     */
     public boolean noHayObjectos(int num)
     {
         if(num==0)
@@ -36,6 +39,12 @@ public class Torre extends Actor
 
     }
 
+    /**
+     * Crea la vida de la torre 
+     * @param b el bando que pertenece la torre
+     * 
+     * @return devuelve el objecto Vida ya creada
+     */
     public Vida creaVida(boolean b)
     {
         World w=getWorld();
@@ -47,6 +56,16 @@ public class Torre extends Actor
         return vd;
     }
 
+    /**
+     * si la torre recibio algun daño
+     * 
+     * @param dano el daño que recibio
+     * @param b el bando 
+     * @param vid la vida que se disminuira
+     * 
+     * @return un 1 si ya no se puedo reducir
+     * @return un 0 si lo logro
+     */
     public int afectado(int dano,boolean b,Vida vid)
     {
         int alert;
@@ -58,6 +77,14 @@ public class Torre extends Actor
         return alert;
     }
 
+    /**
+     * la torre recibe un incremento de vida
+     * 
+     * @param inc el incremento que recibio
+     * @param b el bando 
+     * @param vid la vida que se aumentara
+     * 
+     */
     public void rebilitado(int inc,boolean b,Vida vid)
     {
         int interup;

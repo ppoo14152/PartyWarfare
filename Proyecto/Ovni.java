@@ -4,22 +4,23 @@ import greenfoot.*;
  * La clase ovni es un poder, la cual nos aparece un ovni sobrevolando a los personajes
  * este ovni tiene la funcion de atacar a los personajes, lanzándoles un rayo (esfera verde).
  * 
- * @autor Irvin Alexis Rodriguez Estrada 
- * @autor Irving Gerardo Cardenas Hernadez 
+ * @author Irvin Alexis Rodriguez Estrada 
+ * @author Irving Gerardo Cardenas Hernadez 
  * 
- * @versión (17.15.2015)
+ * @version (17.15.2015)
  */
 public class Ovni extends Actor
 {
-    /**
-     * Act - hace lo que Ovni quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
     private int primeravuelta;
     private int segundavuelta;
     private int terceravuelta;
     private int finvuelta;
     private SimpleTimer timerayo;
+    
+    /**
+     * Constructor de la Clase
+     * 
+     */
     public Ovni()
     {
         primeravuelta=1;
